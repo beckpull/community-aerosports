@@ -58,7 +58,7 @@ function NavTabs() {
       <div id="navMenu" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
         <div className="navbar-end">
           <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'navbar-item is-active' : 'navbar-item'}>Home</Link>
-          <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'navbar-item is-active' : 'navbar-item'}>About Us</Link>
+          {/* <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'navbar-item is-active' : 'navbar-item'}>About Us</Link> */}
           <Link to="/Planes" onClick={toggleMenu} className={currentPage === '/Planes' ? 'navbar-item is-active' : 'navbar-item'}>Our Planes</Link>
           <Link to="/Services" onClick={toggleMenu} className={currentPage === '/Services' ? 'navbar-item is-active' : 'navbar-item'}>Available Services</Link>
           <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'navbar-item is-active' : 'navbar-item'}>Contact Us</Link>
