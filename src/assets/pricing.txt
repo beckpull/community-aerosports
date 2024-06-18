@@ -1,0 +1,6 @@
+Airplanes: 1967 Cessna 182K, 1967 Cessna 172H, RedBird LD Simulator
+Costs: 172: $140/ hour
+             182:$180/ hour
+Redbird Simulator: $75/ hour
+
+All instruction : $75/ hour
