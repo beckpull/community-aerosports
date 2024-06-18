@@ -1,25 +1,19 @@
-import icon1 from '../assets/react.svg';
-import icon2 from '../assets/vite.svg';
-import '../styles/Footer.css';
-
-// const styles = {
-
-// }
+// import '../styles/Footer.css';
+import InstagramButtonIcon from "@/components/icons/instagramIcon";
+import FacebookIcon from "@/components/icons/facebookIcon";
+import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
 
 function Footer() {
-    return (
-        <footer className="has-text-centered">
-            <span>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <img src={icon1} alt="icon1" className="icon" />
-            </a>
-            <a href="" target="_blank" rel="noopener noreferrer">
-                <img src={icon2} alt="icon2" className="icon" />
-            </a>
-            </span>
-            <p className="signature">made with love, bp</p>
-        </footer>
-    )
+  return (
+    <footer className="bottom-0 w-full flex flex-col items-center justify-center p-3 bg-mainBlue500">
+      <div>
+        <InstagramButtonIcon />
+        <FacebookIcon />
+        <LinkedinButtonIcon />
+      </div>
+      <p className="mt-3 text-center">made with love, bp</p>
+    </footer>
+  )
 }
 
 export default Footer;

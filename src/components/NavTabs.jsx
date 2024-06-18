@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/react.svg';
-import '../styles/Navbar.css';
+import logo from '../assets/logo/logo-no-bg.png';
+// import '../styles/Navbar.css';
 
 // const styles = {
 
@@ -41,31 +41,27 @@ function NavTabs() {
   }, [currentPage]);
 
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        <img src={logo} alt="logo" className='logo navbar-start' id="navbar-logo"></img>
-        <p className='title is-6' id="nav-name">Community Aerosports</p>
-
-        <a role="button" className={`navbar-burger ${isActive ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" data-target="navMenu" onClick={toggleMenu}  >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
+    <nav className="flex items-center justify-between flex-wrap bg-mainBlue500 p-6">
+      <div className="flex items-center flex-shrink-0 text-white mr-6">
+        <img src={logo} alt="logo" className='h-8 w-8 mr-2'></img>
+        <span className='font-semibold text-xl tracking-tight' id="nav-name">Community Aerosports</span>
       </div>
-
-      <div id="navMenu" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
-        <div className="navbar-end">
-          <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'navbar-item is-active' : 'navbar-item'}>Home</Link>
-          <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'navbar-item is-active' : 'navbar-item'}>About Us</Link>
-          <Link to="/Planes" onClick={toggleMenu} className={currentPage === '/Planes' ? 'navbar-item is-active' : 'navbar-item'}>Our Planes</Link>
-          <Link to="/Services" onClick={toggleMenu} className={currentPage === '/Services' ? 'navbar-item is-active' : 'navbar-item'}>Available Services</Link>
-          <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'navbar-item is-active' : 'navbar-item'}>Contact Us</Link>
+      <div className="block md:hidden">
+        <button onClick={toggleMenu} className="px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+          Menu
+        </button>
+      </div>
+      <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">
+        <div className="text-sm md:flex-grow">
+          <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4'}>Home</Link>
+          <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4'}>About Us</Link>
+          <Link to="/Planes" onClick={toggleMenu} className={currentPage === '/Planes' ? 'block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4'}>Our Planes</Link>
+          <Link to="/Services" onClick={toggleMenu} className={currentPage === '/Services' ? 'block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4'}>Available Services</Link>
+          <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4'}>Contact Us</Link>
         </div>
       </div>
     </nav>
-  )
+  );
 
 }
 

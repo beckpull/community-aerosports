@@ -9,6 +9,9 @@ import Planes from './pages/Planes.jsx';
 import Services from './pages/Services.jsx';
 import Contact from './pages/Contact.jsx';
 import './index.css';
+import './styles/Footer.css';
+import './styles/Header.css';
+import './styles/Navbar.css';
 
 const router = createBrowserRouter([
   {
