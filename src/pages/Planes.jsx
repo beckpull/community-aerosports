@@ -1,7 +1,7 @@
 function Planes() {
     return (
       <>
-  
+        Planes
       </>
     );
   };

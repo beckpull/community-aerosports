@@ -19,7 +19,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        mainBlue500:'#3b82f6',
+        customGray: '#cbd5e1',
+        mainBlue500: '#3b82f6',
         darkBlue: "#172554",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -56,6 +57,7 @@ module.exports = {
         },
       },
       borderRadius: {
+        'custom': '50% 50% 0 0',
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",

@@ -42,12 +42,12 @@ function NavTabs() {
 
   return (
     <nav className="flex items-center justify-between flex-wrap bg-mainBlue500 p-6">
-      <div className="flex items-center flex-shrink-0 text-white mr-6">
-        <img src={logo} alt="logo" className='h-8 w-8 mr-2'></img>
+      <div className="flex items-center flex-shrink-0 text-white">
+        <img src={logo} alt="logo" className='h-8 w-8'></img>
         <span className='font-semibold text-xl tracking-tight' id="nav-name">Community Aerosports</span>
       </div>
       <div className="block md:hidden">
-        <button onClick={toggleMenu} className="px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <button onClick={toggleMenu} className="px-1 py-2 border rounded text-sky-50 border-sky-300 hover:text-white hover:border-white">
           Menu
         </button>
       </div>
