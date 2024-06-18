@@ -12,11 +12,11 @@ import imagePilot1 from "@/assets/homepage/pilot1.jpg";
 
 export default function TeamCard() {
   return (
-    <div className="flex flex-col sm:flex-row gap-3">
+    <div className="flex flex-col sm:flex-row">
 
       <Card className="sm:w-1/2 ml-3 mt-3 mr-3">
-        <CardHeader>
-          <img src={imagePilot1} alt="Profile" className="w-full h-auto rounded-custom rounded-b-none hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5" />
+        <CardHeader className="flex flex-col items-center">
+          <img src={imagePilot1} alt="Profile" className="w-1/2 h-auto rounded-custom rounded-b-none hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5" />
           <CardTitle>Name</CardTitle>
           <CardDescription>This is their role.</CardDescription>
         </CardHeader>
@@ -29,8 +29,8 @@ export default function TeamCard() {
       </Card>
 
       <Card className="sm:w-1/2 ml-3 mt-3 mr-3">
-        <CardHeader>
-          <img src={imagePilot1} alt="Profile" className="w-full h-auto rounded-custom rounded-b-none hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5" />
+        <CardHeader className="flex flex-col items-center">
+          <img src={imagePilot1} alt="Profile" className="w-1/2 h-auto rounded-custom rounded-b-none hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5" />
           <CardTitle>Name</CardTitle>
           <CardDescription>This is their role.</CardDescription>
         </CardHeader>
