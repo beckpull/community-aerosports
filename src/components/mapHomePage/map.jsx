@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const LocationMap = () => {
-  const position = [37.2992304, -107.8733226,17];
+  const position = [36.7391, -108.2287,17];
 
   return (
     <div className="mt-5" style={{
@@ -20,7 +20,7 @@ const LocationMap = () => {
         />
         <Marker position={position}>
           <Popup>
-            10000 E Louisiana. <br /> ✈️Here!.
+          ✈️   Four Corners Regional Airport (KFMN)<br />1300 W Navajo St,<br />Farmington, NM 87401
           </Popup>
         </Marker>
       </MapContainer>
