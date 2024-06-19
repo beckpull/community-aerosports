@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -20,7 +20,7 @@ const LocationMap = () => {
         />
         <Marker position={position}>
           <Popup>
-          ✈️   Four Corners Regional Airport (KFMN)<br />1300 W Navajo St,<br />Farmington, NM 87401
+          ✈️  Four Corners Regional Airport (KFMN)<br />1300 W Navajo St,<br />Farmington, NM 87401
           </Popup>
         </Marker>
       </MapContainer>
