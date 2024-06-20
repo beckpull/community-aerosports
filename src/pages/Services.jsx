@@ -1,4 +1,5 @@
 import React from 'react';
+import LocationMap from '@/components/mapHomePage/map';
 
 function Services() {
 
@@ -47,7 +48,8 @@ function Services() {
           {/* Placeholder for Map Component */}
           <Card>
             <h2 className="text-xl font-bold mb-4">Training Ground Map</h2>
-            <p className="text-gray-600">Map goes here...</p>
+            <LocationMap />
+            {/* <p className="text-gray-600">Map goes here...</p> */}
           </Card>
         </div>
       </div>
