@@ -2,7 +2,7 @@ import React from 'react';
 
 const HoverCard = ({ plane, show, handleClose }) => (
   <div className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ${show ? 'block' : 'hidden'}`}>
-    <div className="bg-white p-8 rounded-lg shadow-lg relative">
+    <div className="bg-white p-8 rounded-lg shadow-lg relative w-11/12 md:w-3/4 lg:w-2/3">
       <button
         onClick={handleClose}
         className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -21,6 +21,7 @@ const HoverCard = ({ plane, show, handleClose }) => (
 );
 
 export default HoverCard;
+
 
 
 // const HoverCard = ({ plane, show, handleClose }) => {

@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import PlaneCard from '@/components/planes/PlaneCard';
 import HoverCard from '@/components/planes/HoverCard';
@@ -25,7 +24,6 @@ import red6 from '@/assets/images/red/red6.png';
 import red7 from '@/assets/images/red/red7.png';
 import red8 from '@/assets/images/red/red8.png';
 import red9 from '@/assets/images/red/red9.png';
-
 
 const planes = [
   {
@@ -63,7 +61,7 @@ const Planes = () => {
   const handleClose = () => setShow(false);
 
   return (
-    <div className="flex flex-wrap justify-center p-4">
+    <div className="flex flex-col items-center p-4 space-y-4">
       {planes.map((plane, index) => (
         <PlaneCard key={index} plane={plane} onCardClick={handleCardClick} />
       ))}
