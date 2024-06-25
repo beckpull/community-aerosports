@@ -53,7 +53,7 @@ function ContactForm() {
     }
     setSubmitted(true);
     document.querySelector('#success-modal').classList.add('is-active');
-    handleSubmitFormspree(event);
+    // handleSubmitFormspree(event);
   };
 
   const handleCancel = () => {
