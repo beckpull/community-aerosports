@@ -2,6 +2,7 @@ import Image from '../assets/homepage/banner.jpg';
 import InstagramButtonIcon from "@/components/icons/instagramIcon";
 import FacebookIcon from "@/components/icons/facebookIcon";
 import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
+import WhatsAppIcon from '@/components/icons/whatsappIcon';
 import CountUpComponent from "@/components/countUp/countUp.jsx";
 import TeamCard from "@/components/teamCard/teamCard.jsx";
 import CarrouselTestimonials from "@/components/testimonials/carrouselTestimonials.jsx";
@@ -12,8 +13,9 @@ function Home() {
   return (
     <>
     <div style={{ position: 'relative' }}>
-      <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover' }} />
+      {/* <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover' }} /> */}
       <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', flexDirection: 'column' }}>
+        <WhatsAppIcon />
         <FacebookIcon />
         <InstagramButtonIcon />
         <LinkedinButtonIcon />

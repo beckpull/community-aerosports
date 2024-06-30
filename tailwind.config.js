@@ -19,6 +19,8 @@ module.exports = {
     },
     extend: {
       colors: {
+        ImageBlue: '#97bbdc',
+        customBlack: '#020617',
         customGray: '#cbd5e1',
         mainBlue500: '#3b82f6',
         darkBlue: "#172554",
