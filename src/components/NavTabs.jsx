@@ -46,10 +46,15 @@ function NavTabs() {
     return currentPage === '/' ? 'navbar-background-image-large' : 'navbar-background-image';
   };
 
+  // Función para determinar la clase del navbar basada en isActive
+  const navbarClass = () => {
+    return isActive ? "flex items-center justify-between flex-wrap navbar-transparent p-6" : "flex items-center justify-between flex-wrap bg-white p-6";
+  };
+
   return (
     <div className='navbar-image-container'>
       
-      <nav className="flex items-center justify-between flex-wrap navbar-transparent p-6">
+      <nav className={navbarClass()}>
         <div className="flex items-center flex-shrink-0 text-black">
           <img src={logo} alt="logo" className='h-16 w-16'></img>
           <span className='font-semibold text-xl tracking-tight' id="nav-name">Community Aerosports</span>
