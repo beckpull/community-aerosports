@@ -54,6 +54,12 @@
   }
 }
 
+/* @media (min-width: 762px) {
+  .visible-on-desktop {
+    display: block !important;
+  }
+} */
+
 .navbar-background-image-large {
   /* Example styles */
   width: 100%;
@@ -74,5 +80,5 @@
 
 /* Ensure hover styles are applied correctly */
 .navbar-link:hover {
-  color: white;
+  color: blue;
 }

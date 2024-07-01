@@ -22,8 +22,8 @@ function Home() {
       </div>
     </div>
       <div className="text-center">
-        <h1 className="text-lg font-bold mt-5 ml-1 mr-1">Welcome to Community Aerosports</h1>
-        <p className="text-base mt-4 ml-2 mr-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+        <h1 className="lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-1 mr-1">Welcome to Community Aerosports</h1>
+        <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
           ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in 
           voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
