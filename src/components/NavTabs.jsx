@@ -4,10 +4,6 @@ import logo from '../assets/logo/new.png';
 import Image from '../assets/homepage/banner.jpg';
 import '../styles/Navbar.css';
 
-// const styles = {
-
-// };
-
 function NavTabs() {
   const currentPage = useLocation().pathname;
   const [isActive, setIsActive] = useState(false);
@@ -41,19 +37,27 @@ function NavTabs() {
     document.title = `${pageTitle} | Community Aerosports`
   }, [currentPage]);
 
-  // Función para determinar la clase de la imagen del navbar
   const navbarImageClass = () => {
+    if (isActive) {
+      return 'navbar-background-image';
+    }
     return currentPage === '/' ? 'navbar-background-image-large' : 'navbar-background-image';
   };
 
-  // Función para determinar la clase del navbar basada en isActive
   const navbarClass = () => {
-    return isActive ? "flex items-center justify-between flex-wrap navbar-transparent p-6" : "flex items-center justify-between flex-wrap bg-white p-6";
+    if (isActive) {
+      return "flex items-center justify-between flex-wrap navbar-transparent p-6";
+    } else {
+      return "flex items-center justify-between flex-wrap bg-white p-6";
+    }
+  };
+
+  const getLinkClass = (path) => {
+    return currentPage === path ? 'block mt-4 md:inline-block md:mt-0 text-blue-800 hover:text-sky-300 mr-4' : 'block mt-4 md:inline-block md:mt-0 text-black hover:text-white mr-4';
   };
 
   return (
     <div className='navbar-image-container'>
-      
       <nav className={navbarClass()}>
         <div className="flex items-center flex-shrink-0 text-black">
           <img src={logo} alt="logo" className='h-16 w-16'></img>
@@ -66,18 +70,16 @@ function NavTabs() {
         </div>
         <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">
           <div className="text-sm md:flex-grow">
-            <Link to="/" onClick={toggleMenu} className={currentPage === '/' ? 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-black hover:text-white mr-4'}>Home</Link>
-            {/* <Link to="/About" onClick={toggleMenu} className={currentPage === '/About' ? 'block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4'}>About Us</Link> */}
-            <Link to="/Planes" onClick={toggleMenu} className={currentPage === '/Planes' ? 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-black hover:text-white mr-4'}>Our Planes</Link>
-            <Link to="/Services" onClick={toggleMenu} className={currentPage === '/Services' ? 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-black hover:text-white mr-4'}>Available Services</Link>
-            <Link to="/Contact" onClick={toggleMenu} className={currentPage === '/Contact' ? 'block mt-4 md:inline-block md:mt-0 text-white hover:text-white mr-4' : 'block mt-4 md:inline-block md:mt-0 text-black hover:text-white mr-4'}>Contact Us</Link>
+            <Link to="/" onClick={toggleMenu} className={getLinkClass('/')}>Home</Link>
+            <Link to="/Planes" onClick={toggleMenu} className={getLinkClass('/Planes')}>Our Planes</Link>
+            <Link to="/Services" onClick={toggleMenu} className={getLinkClass('/Services')}>Available Services</Link>
+            <Link to="/Contact" onClick={toggleMenu} className={getLinkClass('/Contact')}>Contact Us</Link>
           </div>
         </div>
       </nav>
-      <img src={Image} alt="banner-plane" className={navbarImageClass()} />
+        <img src={Image} alt="banner-plane" className={`${navbarImageClass()} hidden-on-mobile`} />
     </div>
   );
-
 }
 
 export default NavTabs;
