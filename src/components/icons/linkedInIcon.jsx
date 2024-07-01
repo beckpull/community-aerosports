@@ -1,10 +1,11 @@
+import React from 'react';
 import { FaLinkedinIn } from 'react-icons/fa';
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";  // Asegúrate de importar tu componente de botón correctamente
 
-export default function LinkedinButtonIcon() {
-    return (
-      <Button variant="outline" size="icon">
-        <FaLinkedinIn className="h-4 w-4" />
-      </Button>
-    )
-  }
+const LinkedinButtonIcon = () => (
+  <Button className="w-10 h-10 flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700">
+    <FaLinkedinIn className="text-white" />
+  </Button>
+);
+
+export default LinkedinButtonIcon;
