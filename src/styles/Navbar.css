@@ -1,3 +1,5 @@
+/* styles/Navbar.css */
+
 #navbar-logo {
   height: 2rem;
   width: 2rem;
@@ -12,10 +14,71 @@
   margin-left: 12px;
 }
 
-/* .navbar {
-  padding: -50px;
+.navbar-transparent {
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency as needed */
+}
+
+.navbar-image-container {
+  position: relative;
+  /* height: 60vh; */
+}
+
+.navbar-image-container.homepage {
+  height: 60vh; /* Apply homepage specific height */
+}
+
+/* Media query for desktop screen */
+@media (min-width: 768px) {
+  .navbar-image-container.homepage {
+    height: 100vh;
+  }
+}
+
+
+@media (max-width: 762px) {
+  .navbar-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the image stays behind the navbar */
+  }
+}
+
+
+/* CSS used to hide the image on screens higher than 762px */
+@media (min-width: 762px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
+
+/* @media (min-width: 762px) {
+  .visible-on-desktop {
+    display: block !important;
+  }
 } */
 
+.navbar-background-image-large {
+  /* Example styles */
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+  /* Additional styling */
+}
 
+.navbar-link {
+  display: block;
+  margin-top: 4px;
+  margin-right: 16px;
+  text-decoration: none;
+}
 
-/* .nav-item {} */
+.navbar-link.active {
+  color: blue;
+}
+
+/* Ensure hover styles are applied correctly */
+.navbar-link:hover {
+  color: blue;
+}
