@@ -63,7 +63,7 @@ const Planes = () => {
   return (
     <div className="flex flex-col items-center p-4 space-y-4 h-screen">
       {planes.map((plane, index) => (
-        <PlaneCard className="h-72" key={index} plane={plane} onCardClick={handleCardClick} />
+        <PlaneCard className="" key={index} plane={plane} onCardClick={handleCardClick} />
       ))}
       {selectedPlane && (
         <HoverCard plane={selectedPlane} show={show} handleClose={handleClose} />

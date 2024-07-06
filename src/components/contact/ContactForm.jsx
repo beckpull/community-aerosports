@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
+import emailIcon from '@/assets/icons/email.svg';
 
 function ContactForm() {
   const [state, handleSubmitFormspree] = useForm("xvgpodnq");
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [inquiry, setInquiry] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
@@ -12,6 +14,7 @@ function ContactForm() {
   const [fieldsCompleted, setFieldsCompleted] = useState(true);
   const [nameRequired, setNameRequired] = useState(false);
   const [emailRequired, setEmailRequired] = useState(false);
+  const [phoneRequired, setPhoneRequired] = useState(false);
   const [messageRequired, setMessageRequired] = useState(false);
 
   const handleChange = (event) => {
@@ -25,6 +28,10 @@ function ContactForm() {
         setEmail(value);
         setEmailValid(validateEmail(value));
         setEmailRequired(!value);
+        break;
+      case 'phone':
+        setPhone(value);
+        setPhoneRequired(!value);
         break;
       case 'inquiry':
         setInquiry(value);
@@ -45,16 +52,16 @@ function ContactForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!fullName || !email || !message) {
+    if (!fullName || !email || !phone || !message) {
       setFieldsCompleted(false);
       return;
     } else if (!emailValid) {
       return;
     }
-    setSubmitted(true);
-    document.querySelector('#success-modal').classList.add('is-active');
-    handleSubmitFormspree(event);
-    console.log(state);
+    handleSubmitFormspree(event).then(() => {
+      setSubmitted(true);
+      document.querySelector('#success-modal').classList.add('is-active');
+    });
   };
 
   const handleCancel = () => {
@@ -82,13 +89,13 @@ function ContactForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-6">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Name</label>
+      <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
+        <div className="mb-6">
+          <label className="block text-gray-700 text-lg font-semibold mb-2">Name</label>
           <input
             name="fullName"
             value={fullName}
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             type="text"
             placeholder="e.g. First Last"
             onChange={handleChange}
@@ -96,27 +103,46 @@ function ContactForm() {
           {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Email</label>
-          <input
-            name="email"
-            value={email}
-            className={`shadow appearance-none border ${!emailValid ? 'border-red-500' : ''} rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-            type="email"
-            placeholder="e.g. email@example.com"
-            onChange={handleChange}
-          />
+        <div className="mb-6">
+          <label className="block text-gray-700 text-lg font-semibold mb-2">Email</label>
+          <div className="relative">
+            <input
+              name="email"
+              value={email}
+              className={`shadow appearance-none border ${!emailValid ? 'border-red-500' : ''} rounded w-full py-3 px-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+              type="email"
+              placeholder="e.g. email@example.com"
+              onChange={handleChange}
+            />
+            <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+              <img src={emailIcon} className="h-5 w-5 text-grey-700" stroke="currentColor">
+              </img>
+            </span>
+          </div>
           {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
           {!emailValid && email && <p className="text-red-500 text-xs mt-2">Please enter a valid email address.</p>}
         </div>
 
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">I am interested in:</label>
+        <div className="mb-6">
+          <label className="block text-gray-700 text-lg font-semibold mb-2">Phone</label>
+          <input
+            name="phone"
+            value={phone}
+            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="tel"
+            placeholder="e.g. (123) 456-7890"
+            onChange={handleChange}
+          />
+          {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone number is required.</p>}
+        </div>
+
+        <div className="mb-6">
+          <label className="block text-gray-700 text-lg font-semibold mb-2">I am interested in:</label>
           <select
             name="inquiry"
             value={inquiry}
             onChange={handleChange}
-            className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+            className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-3 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
           >
             <option value="" disabled>Select an option</option>
             <option value="Private Pilot License">Private Pilot License</option>
@@ -126,22 +152,23 @@ function ContactForm() {
         </div>
 
         <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2">Message</label>
+          <label className="block text-gray-700 text-lg font-semibold mb-2">Message</label>
           <textarea
             name="message"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             placeholder="Message for Community Aerosports"
             value={message}
             onChange={handleChange}
+            rows="5"
           ></textarea>
           {messageRequired && <p className="text-red-500 text-xs mt-2">Message is required.</p>}
         </div>
 
         <div className="flex items-center justify-between">
-          <button type="submit" disabled={state.submitting} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+          <button type="submit" disabled={state.submitting} className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline">
             Send
           </button>
-          <button type="button" className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onClick={handleCancel}>
+          <button type="button" className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline" onClick={handleCancel}>
             Cancel
           </button>
         </div>
