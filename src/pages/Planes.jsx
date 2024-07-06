@@ -29,23 +29,23 @@ const planes = [
   {
     name: 'Rusty',
     type: '1967 Cessna 182K',
-    image: rusty1,
+    image: rusty4,
     description: "My name is Rusty. I was born in Wichita, Kansas in 1967. I presently fly on aerial survey missions and Instrument training flights. My panel, as you can see in my profile picture, has been updated for training purposes.",
-    moreImages: [rusty2, rusty3, rusty4, rusty5]
+    moreImages: [rusty2, rusty1, rusty3, rusty5]
   },
   {
     name: 'Dusty',
     type: '1967 Cessna 172H',
-    image: dusty1,
+    image: dusty5,
     description: "My name is Dusty. I was born in Wichita, Kansas in 1967. I like helping beginning students learn to fly. I only have 145 horse power but it's a very smooth running engine. For years I had no name. My previous owner had a grandson who decided that I should be called Dusty. Now that I'm living in New Mexico my name feels very appropriate.",
-    moreImages: [dusty2, dusty3, dusty4, dusty5, dusty6]
+    moreImages: [dusty2, dusty3, dusty4, dusty1, dusty6]
   },
   {
     name: 'Red',
     type: 'RedBird LD Simulator',
-    image: red1,
+    image: red8,
     description: "My name is Red. I help advanced students learn proper instrument procedures to propel them into their flying careers. Sometimes, they call me other names that I don't like. It's ok because after 20 hours with me, they begin to understand the complexity of professional flying.",
-    moreImages: [red2, red3, red4, red5, red6, red7, red8, red9]
+    moreImages: [red2, red3, red4, red5, red6, red7, red1, red9]
   }
 ];
 
@@ -61,9 +61,9 @@ const Planes = () => {
   const handleClose = () => setShow(false);
 
   return (
-    <div className="flex flex-col items-center p-4 space-y-4">
+    <div className="flex flex-col items-center p-4 space-y-4 h-screen">
       {planes.map((plane, index) => (
-        <PlaneCard key={index} plane={plane} onCardClick={handleCardClick} />
+        <PlaneCard className="h-72" key={index} plane={plane} onCardClick={handleCardClick} />
       ))}
       {selectedPlane && (
         <HoverCard plane={selectedPlane} show={show} handleClose={handleClose} />

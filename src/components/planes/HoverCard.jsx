@@ -1,4 +1,6 @@
 import React from 'react';
+import { Carousel } from "@material-tailwind/react";
+
 
 const HoverCard = ({ plane, show, handleClose }) => (
   <div className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center ${show ? 'block' : 'hidden'}`}>
@@ -11,11 +13,13 @@ const HoverCard = ({ plane, show, handleClose }) => (
       </button>
       <h2 className="text-2xl font-bold mb-4">{plane.name}</h2>
       <p className="text-gray-700 mb-4">{plane.description}</p>
-      <div className="grid grid-cols-2 gap-4">
+      <Carousel className="rounded-xl ">
         {plane.moreImages.map((image, index) => (
-          <img key={index} src={image} alt={`${plane.name} ${index + 1}`} className="w-full h-32 object-cover rounded-lg" />
+          <div  key={index} className="relative h-full w-full">
+           <img src={image} alt="image 1" className="h-80 w-full object-cover" />
+          </div>
         ))}
-      </div>
+      </Carousel>
     </div>
   </div>
 );

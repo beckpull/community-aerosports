@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from '@formspree/react';
 
 function ContactForm() {
-  const [state, handleSubmitFormspree] = useForm("mleqqrew");
+  const [state, handleSubmitFormspree] = useForm("xvgpodnq");
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [inquiry, setInquiry] = useState('');
@@ -53,7 +53,8 @@ function ContactForm() {
     }
     setSubmitted(true);
     document.querySelector('#success-modal').classList.add('is-active');
-    // handleSubmitFormspree(event);
+    handleSubmitFormspree(event);
+    console.log(state);
   };
 
   const handleCancel = () => {
