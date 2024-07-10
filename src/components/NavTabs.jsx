@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo/new.png';
-import Image from '../assets/homepage/banner.jpg';
+import Image from '../assets/images/cover.png';
 import '../styles/Navbar.css';
 
 function NavTabs() {
@@ -22,7 +22,7 @@ function NavTabs() {
         pageTitle = 'About';
         break;
       case '/Planes':
-        pageTitle = 'Planes';
+        pageTitle = 'Fleet';
         break;
       case '/Services':
         pageTitle = 'Services';
@@ -71,7 +71,7 @@ function NavTabs() {
         <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">
           <div className="lg:text-lg md:text-base sm:text-sm md:flex-grow">
             <Link to="/" onClick={toggleMenu} className={getLinkClass('/')}>Home</Link>
-            <Link to="/Planes" onClick={toggleMenu} className={getLinkClass('/Planes')}>Our Planes</Link>
+            <Link to="/Planes" onClick={toggleMenu} className={getLinkClass('/Planes')}>Our Fleet</Link>
             <Link to="/Services" onClick={toggleMenu} className={getLinkClass('/Services')}>Available Services</Link>
             <Link to="/Contact" onClick={toggleMenu} className={getLinkClass('/Contact')}>Contact Us</Link>
           </div>

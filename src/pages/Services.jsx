@@ -1,7 +1,18 @@
-import React from 'react';
-import LocationMap from '@/components/mapHomePage/map';
+import React, { useState } from 'react';
+import LocationMap from '@/components/services/SvsMap';
+import HoverCard from '@/components/services/HoverCardSvs';
 
 function Services() {
+  const [hoverCard, setHoverCard] = useState(null);
+
+  const handleLearnMoreClick = (title, content) => {
+    setHoverCard({ title, content });
+  };
+
+  const handleCloseHoverCard = () => {
+    setHoverCard(null);
+  };
+
   const Card = ({ children }) => (
     <div className="bg-white shadow-lg rounded-lg p-6 mb-8 w-full">
       {children}
@@ -10,18 +21,44 @@ function Services() {
 
   return (
     <>
+      {hoverCard && (
+        <HoverCard 
+          title={hoverCard.title} 
+          content={hoverCard.content} 
+          onClose={handleCloseHoverCard} 
+        />
+      )}
+
       <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
         <div className="max-w-4xl w-full">
-          {/* Placeholder for Private Pilot License */}
+          {/* Private Pilot License */}
           <Card>
             <h2 className="text-2xl font-bold mb-4">Private Pilot License</h2>
             <p className="text-gray-600">Content goes here...</p>
+            <button 
+              className="text-blue-500 hover:underline mt-4"
+              onClick={() => handleLearnMoreClick(
+                'Private Pilot License Requirements', 
+                'Here are the requirements for the Private Pilot License...'
+              )}
+            >
+              Learn More
+            </button>
           </Card>
 
-          {/* Placeholder for Instrumental Ratings */}
+          {/* Instrumental Ratings */}
           <Card>
             <h2 className="text-2xl font-bold mb-4">Instrumental Ratings</h2>
             <p className="text-gray-600">Content goes here...</p>
+            <button 
+              className="text-blue-500 hover:underline mt-4"
+              onClick={() => handleLearnMoreClick(
+                'Instrumental Ratings Requirements', 
+                'Here are the requirements for the Instrumental Ratings...'
+              )}
+            >
+              Learn More
+            </button>
           </Card>
 
           {/* Pricing Information */}

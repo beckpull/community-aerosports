@@ -1,4 +1,4 @@
-import Image from '../assets/homepage/banner.jpg';
+// import Image from '../assets/images/cover.png';
 import InstagramButtonIcon from "@/components/icons/instagramIcon";
 import FacebookIcon from "@/components/icons/facebookIcon";
 import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
