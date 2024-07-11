@@ -6,7 +6,7 @@ import Test3 from "../../assets/testimonials/testimonial3.jpg";
 export default function CarouselDefault() {
   return (
     <div className="p-2 justify-center items-center">
-      <h2 className="text-xl font-bold text-center text-gray-800 my-8">What Our Clients Say</h2>
+      <h2 className="text-xl font-bold text-center text-gray-800 my-8">Testimonials:</h2>
       <Carousel className="rounded-xl ">
         <div className="relative h-full w-full">
           <img
@@ -21,7 +21,7 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-xl mt-2"
               >
-                "John D., Denver, CO"
+                Joe M. ~ Hesperus, CO
               </Typography>
               <Typography
                 variant="lead"
@@ -48,7 +48,7 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-xl"
               >
-                "Sarah M., Boulder, CO
+                Beck F. ~ Durango, CO
               </Typography>
               <Typography
                 variant="lead"
@@ -75,7 +75,7 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-4 lg:text-xl md:text-lg sm:text-base text-xl"
               >
-                "Alex P., Fort Collins, CO"
+                Third P. ~ Somewhere, NM
               </Typography>
               <Typography
                 variant="lead"

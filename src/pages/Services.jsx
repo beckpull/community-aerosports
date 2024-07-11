@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import LocationMap from '@/components/services/SvsMap';
-import HoverCard from '@/components/services/HoverCardSvs';
+import HoverCardPrivatePilot from '@/components/services/HoverCardPrivatePilot';
+import HoverCardInstrumentalRatings from '@/components/services/HoverCardInstrumentalRatings';
 
 function Services() {
   const [hoverCard, setHoverCard] = useState(null);
 
-  const handleLearnMoreClick = (title, content) => {
-    setHoverCard({ title, content });
+  const handleLearnMoreClick = (cardType) => {
+    setHoverCard(cardType);
   };
 
   const handleCloseHoverCard = () => {
@@ -21,12 +22,11 @@ function Services() {
 
   return (
     <>
-      {hoverCard && (
-        <HoverCard 
-          title={hoverCard.title} 
-          content={hoverCard.content} 
-          onClose={handleCloseHoverCard} 
-        />
+      {hoverCard === 'PrivatePilot' && (
+        <HoverCardPrivatePilot onClose={handleCloseHoverCard} />
+      )}
+      {hoverCard === 'InstrumentalRatings' && (
+        <HoverCardInstrumentalRatings onClose={handleCloseHoverCard} />
       )}
 
       <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
@@ -34,13 +34,10 @@ function Services() {
           {/* Private Pilot License */}
           <Card>
             <h2 className="text-2xl font-bold mb-4">Private Pilot License</h2>
-            <p className="text-gray-600">Content goes here...</p>
+            <p className="text-gray-600">Learn to fly and obtain your Private Pilot License with our comprehensive training program.</p>
             <button 
               className="text-blue-500 hover:underline mt-4"
-              onClick={() => handleLearnMoreClick(
-                'Private Pilot License Requirements', 
-                'Here are the requirements for the Private Pilot License...'
-              )}
+              onClick={() => handleLearnMoreClick('PrivatePilot')}
             >
               Learn More
             </button>
@@ -49,13 +46,10 @@ function Services() {
           {/* Instrumental Ratings */}
           <Card>
             <h2 className="text-2xl font-bold mb-4">Instrumental Ratings</h2>
-            <p className="text-gray-600">Content goes here...</p>
+            <p className="text-gray-600">Enhance your flying skills with our Instrument Rating training.</p>
             <button 
               className="text-blue-500 hover:underline mt-4"
-              onClick={() => handleLearnMoreClick(
-                'Instrumental Ratings Requirements', 
-                'Here are the requirements for the Instrumental Ratings...'
-              )}
+              onClick={() => handleLearnMoreClick('InstrumentalRatings')}
             >
               Learn More
             </button>

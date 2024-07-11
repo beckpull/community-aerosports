@@ -23,8 +23,8 @@ export default function TeamCard() {
           <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
             <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
           </div>
-          <CardTitle className="font-semibold">Name</CardTitle>
-          <CardDescription>This is their role.</CardDescription>
+          <CardTitle className="font-semibold">Russell Gervase</CardTitle>
+          <CardDescription>ATP, CFII</CardDescription>
         </CardHeader>
         <CardContent>
           <Button variant="ghost" size="icon" className="rounded-full hover:bg-customGray">
@@ -43,8 +43,8 @@ export default function TeamCard() {
           <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
             <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
           </div>
-          <CardTitle className="font-semibold">Name</CardTitle>
-          <CardDescription>This is their role.</CardDescription>
+          <CardTitle className="font-semibold">Emily</CardTitle>
+          <CardDescription>CFI</CardDescription>
         </CardHeader>
         <CardContent>
           <Button variant="ghost" size="icon" className="rounded-full hover:bg-customGray">
