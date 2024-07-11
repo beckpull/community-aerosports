@@ -27,7 +27,7 @@ export default function TeamCard() {
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}>
-          <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
+          <div className="w-44 h-44 rounded overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
             <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
           </div>
           <CardTitle className="font-semibold">Russell Gervase</CardTitle>
@@ -48,7 +48,7 @@ export default function TeamCard() {
             backgroundPosition: 'center'
           }}>
 
-          <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
+          <div className="w-44 h-44 rounded overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
             <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
           </div>
           <CardTitle className="font-semibold">Emily</CardTitle>
