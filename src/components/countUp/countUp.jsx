@@ -17,9 +17,9 @@ export default function CountUpComponent() {
 
     const countUpInstances = [
       new CountUp("targetId", 27, options),
-      new CountUp("targetId2", 3401, options),
-      new CountUp("targetId3", 234, options),
-      new CountUp("targetId4", 320, options),
+      // new CountUp("targetId2", 3401, options),
+      // new CountUp("targetId3", 234, options),
+      // new CountUp("targetId4", 320, options),
     ];
 
     countUpInstances.forEach(countUp => {
@@ -51,34 +51,34 @@ export default function CountUpComponent() {
           </div>
 
           {/* Clients */}
-          <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
+          {/* <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon2} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
               <div id="targetId2" className="text-black font-bold text-2xl"></div>
               <span className="text-black font-bold text-2xl">+</span>
             </div>
             <p className="text-neutral mt-1">Clients</p>
-          </div>
+          </div> */}
 
           {/* Graduated Pilots */}
-          <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
+          {/* <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon3} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
               <div id="targetId3" className="text-black font-bold text-2xl"></div>
               <span className="text-black font-bold text-2xl">+</span>
             </div>
             <p className="text-neutral mt-1">Graduated Pilots</p>
-          </div>
+          </div> */}
 
           {/* Total Flight Hours */}
-          <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
+          {/* <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon4} alt="Icon Description" className="mt-5" style={{ height: '90px', width: '90px' }} />
             <div className="flex items-center">
               <div id="targetId4" className="text-black font-bold text-2xl"></div>
               <span className="text-black font-bold text-2xl">+</span>
             </div>
             <p className="text-neutral mt-1">Total Flight Hours</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
