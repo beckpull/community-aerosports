@@ -16,7 +16,7 @@ export default function CountUpComponent() {
     };
 
     const countUpInstances = [
-      new CountUp("targetId", 17, options),
+      new CountUp("targetId", 27, options),
       new CountUp("targetId2", 3401, options),
       new CountUp("targetId3", 234, options),
       new CountUp("targetId4", 320, options),

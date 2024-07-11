@@ -8,7 +8,7 @@ const PlaneCard = ({ plane, onCardClick }) => (
     <img
       src={plane.image}
       alt={plane.name}
-      className="w-full h-56 object-cover" // Slightly taller
+      className="w-full h-56 object-cover"
     />
     <div className="absolute bottom-0 left-0 right-0 bg-gray-900 bg-opacity-50 p-4">
       <h2 className="text-white text-lg font-bold">{plane.name}</h2>
