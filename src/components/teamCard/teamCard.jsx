@@ -62,7 +62,7 @@ export default function TeamCard() {
         </CardContent>
       </Card>
     </div>
-
+  </>
 
   )
 }
