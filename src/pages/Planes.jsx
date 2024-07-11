@@ -61,7 +61,7 @@ const Planes = () => {
   const handleClose = () => setShow(false);
 
   return (
-    <div className="flex flex-col items-center p-4 space-y-4 h-screen">
+    <div className="flex flex-col items-center p-4 space-y-4 h-screen overflow-y-scroll">
       {planes.map((plane, index) => (
         <PlaneCard className="" key={index} plane={plane} onCardClick={handleCardClick} />
       ))}

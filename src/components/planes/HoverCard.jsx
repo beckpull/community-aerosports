@@ -15,8 +15,8 @@ const HoverCard = ({ plane, show, handleClose }) => (
       <p className="text-gray-700 mb-4">{plane.description}</p>
       <Carousel className="rounded-xl ">
         {plane.moreImages.map((image, index) => (
-          <div  key={index} className="relative h-full w-full">
-           <img src={image} alt="image 1" className="h-80 w-full object-cover" />
+          <div  key={index} className="overflow-hidden relative h-full w-full">
+           <img src={image} alt="image 1" className="h-96 hover:h-full w-full object-cover overflow-y-scroll" />
           </div>
         ))}
       </Carousel>

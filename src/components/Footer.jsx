@@ -7,13 +7,14 @@ import WhatsAppIcon from './icons/whatsappIcon';
 function Footer() {
   return (
     <footer className="bottom-0 w-full flex flex-col items-center justify-center p-3 bg-customBlack">
-      <div className="flex gap-4 mt-3">
-        <WhatsAppIcon />
+      <div className="flex gap-4">
+      <p className="mt-3 text-center text-gray-200 text-sm opacity-50">© Community Aerosports. All rights reserved</p>
+        {/* <WhatsAppIcon />
         <InstagramButtonIcon />
         <FacebookIcon />
-        <LinkedinButtonIcon />
+        <LinkedinButtonIcon /> */}
       </div>
-      <p className="mt-3 text-center text-gray-200 text-sm opacity-50">made with love, bp</p>
+      <p className="text-center text-gray-800 text-bold text-sm opacity-50">made with love, bp</p>
     </footer>
   );
 }

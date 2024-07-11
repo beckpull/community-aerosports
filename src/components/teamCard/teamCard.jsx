@@ -27,25 +27,19 @@ export default function TeamCard() {
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}>
-            <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
-              <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
-            </div>
-            <CardTitle className="font-semibold">
-              Russ Gervase
-            </CardTitle>
-            <CardDescription>
-              Chief Pilot at Aerosports LLC<br />Licenses here
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <a href="https://www.linkedin.com/in/russ-gervase-9520ba12/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="mt-3 rounded-full border border-black hover:bg-customGray">
-                <FaLinkedinIn />
-              </Button>
-            </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </CardContent>
-        </Card>
+          <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
+            <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
+          </div>
+          <CardTitle className="font-semibold">Russell Gervase</CardTitle>
+          <CardDescription>ATP, CFII</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button variant="ghost" size="icon" className="rounded-full hover:bg-customGray">
+            <FaLinkedinIn />
+          </Button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </CardContent>
+      </Card>
 
         <Card className="sm:w-1/2 ml-3 mt-3 mr-3 ">
           <CardHeader className="pt-20 flex flex-col items-center rounded-t-lg" style={{
@@ -53,23 +47,21 @@ export default function TeamCard() {
             backgroundSize: 'cover', // Esto asegura que la imagen cubra completamente el espacio disponible sin distorsionarse
             backgroundPosition: 'center'
           }}>
-            <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
-              <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
-            </div>
-            <CardTitle className="font-semibold">Name</CardTitle>
-            <CardDescription>This is their role.<br />Licenses here</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <a href="https://www.linkedin.com/in/russ-gervase-9520ba12/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="mt-3 rounded-full border border-black hover:bg-customGray">
-                <FaLinkedinIn />
-              </Button>
-            </a>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-          </CardContent>
-        </Card>
-      </div>
-    </>
+
+          <div className="w-48 h-48 rounded-full overflow-hidden hover:scale-105 hover:shadow-lg transition-transform duration-300 mb-5 border-4 border-white">
+            <img src={imagePilot1} alt="Profile" className="w-full h-full object-cover" />
+          </div>
+          <CardTitle className="font-semibold">Emily</CardTitle>
+          <CardDescription>CFI</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Button variant="ghost" size="icon" className="rounded-full hover:bg-customGray">
+            <FaLinkedinIn />
+          </Button>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </CardContent>
+      </Card>
+    </div>
 
 
   )
