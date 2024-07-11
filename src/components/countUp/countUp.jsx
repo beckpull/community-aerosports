@@ -51,34 +51,32 @@ export default function CountUpComponent() {
           </div>
 
           {/* Clients */}
-          {/* <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
+          <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon2} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <div id="targetId2" className="text-black font-bold text-2xl"></div>
-              <span className="text-black font-bold text-2xl">+</span>
+              <span className="text-black font-bold text-2xl">Private</span>
             </div>
-            <p className="text-neutral mt-1">Clients</p>
-          </div> */}
+            <p className="text-neutral text-sm">Flying Experience</p>
+          </div>
 
           {/* Graduated Pilots */}
-          {/* <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
+          <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon3} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <div id="targetId3" className="text-black font-bold text-2xl"></div>
-              <span className="text-black font-bold text-2xl">+</span>
+              <span className="text-black font-bold text-2xl">Aeromedical</span>
             </div>
-            <p className="text-neutral mt-1">Graduated Pilots</p>
-          </div> */}
+            <p className="text-neutral text-sm">Professional Experience</p>
+
+          </div>
 
           {/* Total Flight Hours */}
-          {/* <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
-            <img src={Icon4} alt="Icon Description" className="mt-5" style={{ height: '90px', width: '90px' }} />
+          <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
+            <img src={Icon4} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <div id="targetId4" className="text-black font-bold text-2xl"></div>
-              <span className="text-black font-bold text-2xl">+</span>
+              <span className="text-black font-bold text-2xl">Corporate</span>
             </div>
-            <p className="text-neutral mt-1">Total Flight Hours</p>
-          </div> */}
+            <p className="text-neutral text-sm">Professional Experience</p>
+          </div>
         </div>
       </div>
     </div>
