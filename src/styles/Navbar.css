@@ -9,10 +9,9 @@
   vertical-align: middle;
 }
 
-#nav-name {
+/* #nav-name {
   margin-top: 7px;
-  margin-left: 12px;
-}
+} */
 
 .navbar-transparent {
   background-color: rgba(255, 255, 255, 0.5); /* Adjust transparency as needed */
