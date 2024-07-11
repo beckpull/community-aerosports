@@ -72,24 +72,24 @@ function ContactForm() {
     <>
       {submitted && (
         <div id="success-modal" className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center relative">
+          <div className="bg-white rounded-lg shadow-lg p-8 text-center relative max-w-lg w-full">
             <button
               onClick={() => {
                 setSubmitted(false);
                 window.location.href = '/';
               }}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
             >
               &times;
             </button>
-            <h2 className="text-2xl font-bold mb-4">Your message has been delivered!</h2>
-            <p className="text-gray-700 mb-4">Thank you for reaching out - we will get in touch soon!</p>
-            <p className="text-gray-500">✨ Have a splendid day! ✨</p>
+            <h2 className="text-3xl font-bold text-blue-600 mb-6">Message Sent Successfully!</h2>
+            <p className="text-gray-700 mb-6">Thank you for reaching out. We appreciate your message and will respond promptly.</p>
+            <p className="text-gray-500">✨ Have a fantastic day! ✨</p>
           </div>
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg mt-10">
+      <form onSubmit={handleSubmit} className="p-8 bg-white rounded-lg mt-10">
         <div className="mb-6">
           <label className="block text-gray-700 text-lg font-semibold mb-2">Name</label>
           <input
