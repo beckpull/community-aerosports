@@ -7,13 +7,17 @@ const LocationMap = () => {
   const kdroPosition = [37.1515, -107.7538];
 
   return (
-    <div className="mt-5" style={{
+    <div
+    className="mt-5"
+    style={{
       height: '300px',
       width: '70%',
       margin: '0 auto',
       marginTop: '1.25rem',
-      alignItems: 'center'
-    }}>
+      alignItems: 'center',
+      zIndex: 1 // Ensure it’s not interfering with hover card z-index
+    }}
+  >
       <MapContainer center={kfmnPosition} zoom={8} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
