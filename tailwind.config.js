@@ -20,6 +20,7 @@ module.exports = withMT({
     },
     extend: {
       colors: {
+        stone: '#292524',
         neutral:'#57534e',
         customWhite: '#f5f5f5',
         ImageBlue: '#97bbdc',
