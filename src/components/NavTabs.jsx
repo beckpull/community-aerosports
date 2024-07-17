@@ -64,8 +64,10 @@ function NavTabs() {
           <span className='font-semibold lg:text-3xl md:text-xl text-lg tracking-tight' id="nav-name">Community Aerosports LLC</span>
         </div>
         <div className="block md:hidden mr-2">
-          <button onClick={toggleMenu} className="bg-mainBlue500 hover:bg-white hover:border-2 hover:shadow-lg hover:shadow-customGray-500/50 md:text-xl sm:text-lg px-1 py-2 border rounded text-white border-blue-800 hover:text-black">
-            Menu
+          <button onClick={toggleMenu} className="flex flex-col justify-around items-center w-10 h-10 rounded mt-2 mb-2 bg-customWhite hover:bg-customGray p-2">
+            <div className="w-3 h-0.5 bg-stone"></div>
+            <div className="w-6 h-0.5 bg-stone"></div>
+            <div className="w-3 h-0.5 bg-stone"></div>
           </button>
         </div>
         <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">
@@ -77,7 +79,7 @@ function NavTabs() {
           </div>
         </div>
       </nav>
-        <img src={Image} alt="banner-plane" className={`${navbarImageClass()} hidden-on-mobile`} />
+      <img src={Image} alt="banner-plane" className={`${navbarImageClass()} hidden-on-mobile`} />
     </div>
   );
 }
