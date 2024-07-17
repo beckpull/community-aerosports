@@ -26,7 +26,7 @@ function Home() {
   return (
     <>
       <div style={{ position: 'relative' }}>
-        {/* <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover' }} /> */}
+        <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover', display: isLargeScreen ? 'block' : 'none' }} />
         <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', flexDirection: 'column' }}>
           {/* <WhatsAppIcon />
           <FacebookIcon />

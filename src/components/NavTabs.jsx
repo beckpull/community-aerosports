@@ -53,7 +53,7 @@ function NavTabs() {
   };
 
   const getLinkClass = (path) => {
-    return currentPage === path ? 'block mt-4 md:inline-block md:mt-0 text-blue-800 hover:text-sky-300 mr-4 font-bold' : 'block mt-4 md:inline-block md:mt-0 text-black hover:text-blue-400 mr-4';
+    return currentPage === path ? 'block mt-4 md:inline-block md:mt-0 text-blue-800 hover:text-sky-300 mr-4 font-bold' : 'font-medium block mt-4 md:inline-block md:mt-0 text-black hover:text-blue-400 mr-4';
   };
 
   return (
@@ -61,7 +61,7 @@ function NavTabs() {
       <nav className={navbarClass()}>
         <div className="flex items-center flex-shrink-0 text-black">
           <img src={logo} alt="logo" className='h-16 w-16'></img>
-          <span className='font-semibold lg:text-3xl md:text-xl text-lg tracking-tight' id="nav-name">Community Aerosports LLC</span>
+          <span className='font-bold lg:text-3xl md:text-xl text-lg tracking-tight' id="nav-name">Community Aerosports LLC</span>
         </div>
         <div className="block md:hidden mr-2">
           <button onClick={toggleMenu} className="flex flex-col justify-around items-center w-10 h-10 rounded mt-2 mb-2 bg-customWhite hover:bg-customGray p-2">
@@ -70,8 +70,8 @@ function NavTabs() {
             <div className="w-3 h-0.5 bg-stone"></div>
           </button>
         </div>
-        <div className={`w-full ${isActive ? 'block' : 'hidden'} md:block md:flex md:items-center md:w-auto`} id="navMenu">
-          <div className="lg:text-lg md:text-base sm:text-sm md:flex-grow mb-4 ml-2">
+        <div className={`w-full ${isActive ? 'block' : 'hidden'} md:flex md:items-center md:w-auto`} id="navMenu">
+          <div className="lg:text-lg md:text-base sm:text-sm md:flex-grow ml-1">
             <Link to="/" onClick={toggleMenu} className={getLinkClass('/')}>Home</Link>
             <Link to="/Planes" onClick={toggleMenu} className={getLinkClass('/Planes')}>Our Fleet</Link>
             <Link to="/Services" onClick={toggleMenu} className={getLinkClass('/Services')}>Available Services</Link>
