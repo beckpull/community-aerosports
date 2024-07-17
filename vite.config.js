@@ -10,9 +10,6 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: [
-        'favicon.ico', 
-        'robots.txt', 
-        'apple-touch-icon.png',
         'src/assets/images/rusty-182k/rusty1.png',
         'src/assets/images/rusty-182k/rusty2.png',
         'src/assets/images/rusty-182k/rusty3.png',
@@ -40,7 +37,7 @@ export default defineConfig({
         description: 'An expert flight instructor based in Farmington, NM',
         icons: [
           {
-            src: 'src/assets/logo/new.png',
+            src: './logo.png',
             sizes: '192x192',
             type: 'image/png',
           },
