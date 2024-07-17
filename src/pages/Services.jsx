@@ -40,7 +40,7 @@ function Services() {
                 className="text-blue-500 hover:underline"
                 onClick={() => handleLearnMoreClick('PrivatePilot')}
               >
-                Learn More
+                <i>Learn More - FAA requirements</i>
               </button>
             </div>
           </Card>
@@ -54,8 +54,8 @@ function Services() {
                 className="text-blue-500 hover:underline"
                 onClick={() => handleLearnMoreClick('InstrumentalRatings')}
               >
-                Learn More
-              </button>
+                <i>Learn More - FAA requirements</i>
+                </button>
             </div>
           </Card>
 
