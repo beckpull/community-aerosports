@@ -1,4 +1,23 @@
 .custom-size {
     height: 200px;
     width: 200px;
+}
+
+.xl-text {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+  @media screen and (max-width: 768px) {
+    .custom-size {
+      height: 160px;
+      width: 160px;
+    }
+    .xl-text {
+      font-size: 1rem;
+      line-height: 1.3rem;
+    }
+    .text-neutral {
+      font-size: 0.6rem;
+    }
   }
