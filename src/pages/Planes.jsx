@@ -2,28 +2,28 @@ import React, { useState } from 'react';
 import PlaneCard from '@/components/planes/PlaneCard';
 import HoverCard from '@/components/planes/HoverCard';
 
-// import rusty1 from '@/assets/images/rusty-182k/rusty1.png';
-// import rusty2 from '@/assets/images/rusty-182k/rusty2.png';
-// import rusty3 from '@/assets/images/rusty-182k/rusty3.png';
-// import rusty4 from '@/assets/images/rusty-182k/rusty4.png';
-// import rusty5 from '@/assets/images/rusty-182k/rusty5.png';
+import rusty1 from '@/assets/images/rusty-182k/rusty1.png';
+import rusty2 from '@/assets/images/rusty-182k/rusty2.png';
+import rusty3 from '@/assets/images/rusty-182k/rusty3.png';
+import rusty4 from '@/assets/images/rusty-182k/rusty4.png';
+import rusty5 from '@/assets/images/rusty-182k/rusty5.png';
 
-// import dusty1 from '@/assets/images/dusty-172h/dusty1.png';
-// import dusty2 from '@/assets/images/dusty-172h/dusty2.png';
-// import dusty3 from '@/assets/images/dusty-172h/dusty3.png';
-// import dusty4 from '@/assets/images/dusty-172h/dusty4.png';
-// import dusty5 from '@/assets/images/dusty-172h/dusty5.png';
-// import dusty6 from '@/assets/images/dusty-172h/dusty6.png';
+import dusty1 from '@/assets/images/dusty-172h/dusty1.png';
+import dusty2 from '@/assets/images/dusty-172h/dusty2.png';
+import dusty3 from '@/assets/images/dusty-172h/dusty3.png';
+import dusty4 from '@/assets/images/dusty-172h/dusty4.png';
+import dusty5 from '@/assets/images/dusty-172h/dusty5.png';
+import dusty6 from '@/assets/images/dusty-172h/dusty6.png';
 
-// import red1 from '@/assets/images/red/red1.png';
-// import red2 from '@/assets/images/red/red2.png';
-// import red3 from '@/assets/images/red/red3.png';
-// import red4 from '@/assets/images/red/red4.png';
-// import red5 from '@/assets/images/red/red5.png';
-// import red6 from '@/assets/images/red/red6.png';
-// import red7 from '@/assets/images/red/red7.png';
-// import red8 from '@/assets/images/red/red8.png';
-// import red9 from '@/assets/images/red/red9.png';
+import red1 from '@/assets/images/red/red1.png';
+import red2 from '@/assets/images/red/red2.png';
+import red3 from '@/assets/images/red/red3.png';
+import red4 from '@/assets/images/red/red4.png';
+import red5 from '@/assets/images/red/red5.png';
+import red6 from '@/assets/images/red/red6.png';
+import red7 from '@/assets/images/red/red7.png';
+import red8 from '@/assets/images/red/red8.png';
+import red9 from '@/assets/images/red/red9.png';
 
 const planes = [
   {
