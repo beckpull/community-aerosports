@@ -28,8 +28,7 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Dreams came true at Community Aerosports! Knowledgeable instructors and hands-on training 
-                boosted my confidence. Flying over Colorado was unforgettable. Highly recommend!"
+                "Russell is a great instructor. I have been taking lessons from him since I started in 2015 and he has been extremely helpful and supportive in my journey into aviation."
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -46,17 +45,16 @@ export default function CarouselDefault() {
               <Typography
                 variant="h2"
                 color="white"
-                className="mb-4 lg:text-xl md:text-lg sm:text-base text-xl"
+                className="mb-4 pt-5  lg:text-xl md:text-lg sm:text-base text-xl"
               >
                 Beck F. ~ Durango, CO
               </Typography>
               <Typography
                 variant="lead"
                 color="white"
-                className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
+                className="mb-5lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Community Aerosports provided top-notch training with personalized attention. The diverse weather 
-                conditions in Colorado prepared me well. Ready for a pilot career thanks to them!"
+                "In my years of knowing Russell I have always found him to be knowledgeable, respectful and absolutely thorough. I appreciate his person and his instruction style and he has absolutely become a friend. I will always recommend him and am so excited about Emily's future in aviation!"
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
