@@ -2,3 +2,10 @@
     height: 200px;
     width: 200px;
   }
+
+  @media screen and (max-width: 768px) {
+    .custom-size {
+      height: 180px;
+      width: 180px;
+    }
+  }

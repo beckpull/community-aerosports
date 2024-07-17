@@ -39,7 +39,7 @@ export default function CountUpComponent() {
         </p>
       </div>
       <div className="count-down mb-5 mt-5 rounded border-customWhite border-2 p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
           {/* Years of Experience */}
           <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon1} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
@@ -56,7 +56,7 @@ export default function CountUpComponent() {
             <div className="flex items-center">
               <span className="text-black font-bold text-2xl">Private</span>
             </div>
-            <p className="text-neutral text-sm">Flying Experience</p>
+            <p className="text-neutral ">Flying Experience</p>
           </div>
 
           {/* Graduated Pilots */}
