@@ -11,7 +11,7 @@ const LocationMap = () => {
     className="mt-5"
     style={{
       height: '300px',
-      width: '70%',
+      width: '90%',
       margin: '0 auto',
       marginTop: '1.25rem',
       alignItems: 'center',
