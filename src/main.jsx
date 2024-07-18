@@ -13,6 +13,19 @@ import './styles/Footer.css';
 import './styles/Header.css';
 import './styles/Navbar.css';
 
+// src/main.js or src/App.jsx
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  });
+}
+
 const router = createBrowserRouter([
   {
     path: '/',

@@ -47,7 +47,7 @@ function Home() {
 
 
           <CountUpComponent />
-          <TeamCard />
+          {/* <TeamCard /> */}
           <LocationMap />
           <CarrouselTestimonials />
         </div>

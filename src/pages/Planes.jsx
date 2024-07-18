@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PlaneCard from '@/components/planes/PlaneCard';
 import HoverCard from '@/components/planes/HoverCard';
-import LazyLoad from 'react-lazyload';
 
 import rusty1 from '@/assets/images/rusty-182k/rusty1.png';
 import rusty2 from '@/assets/images/rusty-182k/rusty2.png';
