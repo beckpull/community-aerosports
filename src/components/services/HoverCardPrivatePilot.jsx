@@ -1,5 +1,5 @@
 import React from 'react';
-import AccordionComp from '@/components/services/Accordion';
+import AccordionComp1 from '@/components/services/FirstService';
 
 const HoverCardPrivatePilot = ({ onClose }) => {
   return (
@@ -11,11 +11,11 @@ const HoverCardPrivatePilot = ({ onClose }) => {
         >
           &times;
         </button>
-        <div className="relative bg-gray mt-6 h-full overflow-auto">
+        <div className="relative bg-gray mt-2 h-full overflow-auto">
           <h2 className="text-base text-center font-bold mb-2 tracking-wide">Private Pilot License Requirements</h2>
           <div style={styles.container}>
             <h1 style={styles.title} className='font-semibold text-lg text-center tracking-normal'>FAA Regulations - Private Pilot Certificate</h1>
-            <AccordionComp />
+            <AccordionComp1 />
           </div>
         </div>
       </div>

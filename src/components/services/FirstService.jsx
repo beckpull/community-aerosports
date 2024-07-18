@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const AccordionComp = () => (
+const FirstService = () => (
   <Accordion type="single" collapsible>
     <AccordionItem value="item-1">
       <AccordionTrigger className='md:text-base lg:text-base text-sm tracking-wide'>§ 61.102 Applicability</AccordionTrigger>
@@ -132,47 +132,5 @@ const AccordionComp = () => (
   </Accordion>
 );
 
-
-const styles = {
-  container: {
-    maxWidth: '1200px',
-    margin: '20px auto',
-    padding: '20px',
-    backgroundColor: '#fff',
-    borderRadius: '8px',
-    boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-  },
-  title: {
-    fontSize: '2rem',
-    color: '#333',
-    marginBottom: '20px',
-  },
-  subtitle: {
-    fontSize: '1.5rem',
-    color: '#333',
-    borderBottom: '2px solid #eee',
-    paddingBottom: '10px',
-    marginBottom: '10px',
-  },
-  section: {
-    marginBottom: '20px',
-  },
-  paragraph: {
-    // margin: '10px 0',
-  },
-  list: {
-    // margin: '10px 0',
-    // paddingLeft: '20px',
-  },
-  nestedList: {
-    margin: '10px 0',
-    paddingLeft: '20px',
-  },
-  citation: {
-    fontSize: '0.9em',
-    color: '#666',
-    marginTop: '10px',
-  },
-};
-export default AccordionComp;
+export default FirstService;
 
