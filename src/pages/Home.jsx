@@ -30,23 +30,36 @@ function Home() {
     <>
       <div style={{
         position: 'relative',
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(${Banner})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url(${Banner})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
-        <div style={{ textAlign: 'center', padding: '10px 0' }}>
+        <div className='text-center p-2.5'>
+          <div className="flex sm:flex-row justify-center items-center mt-2 mb-2">
+            
+            <span className='text-white font-medium mr-5 md:mr-15 mt-2 text-sm md:text-base'>
+              <i className="fas fa-phone mr-2 text-white"></i>
+              <strong>
+                <a href="tel:+15054023438"> 
+                +1 (505) 402-3438
+                </a>
+              </strong>
+            </span>
 
-          <i className="fas fa-phone mr-2 text-white"></i>
-          <span style={{ marginRight: '20px', color: 'white' }}>
-            Ph :<strong><a href="tel:+15054023438"> +1 (505) 402-3438</a></strong>
-          </span>
+            <span className='text-white font-medium ml-5 mt-2 text-sm md:text-base'>
+              <i className="fas fa-clock mr-2 text-white"></i>
+              <strong>
+                <a href="https://www.google.com/maps/search/?api=1&query=Four+Corners+Regional+Airport+KFMN+1300+W+Navajo+St+Farmington+NM+87401" target="_blank" rel="noopener noreferrer">
+                  M - F 9:00 AM - 5:00 PM
+                </a>
+              </strong>
+            </span>
 
-          <span style={{ color: 'white' }}className='font-bold ml-5'>
-          <a href="https://www.google.com/maps/search/?api=1&query=Four+Corners+Regional+Airport+KFMN+1300+W+Navajo+St+Farmington+NM+87401" target="_blank" rel="noopener noreferrer">Hours: M-F 9:00 AM - 5:00 PM</a>
-          </span>
+          </div>
+
 
           <a href="mailto:fmnflyer@outlook.com?subject=GetAQuote Subject&body=Email Body" target="_blank" rel="noopener noreferrer">
-            <Button className='m-2 ml-9 lg:text-lg md:text-base sm:text-base  text-black font-bold hover:bg-white hover:text-black hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50' style={{ backgroundColor: '#DAA520', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
+            <Button className='m-2 ml-9 lg:text-lg md:text-base sm:text-base  text-black font-medium hover:bg-white hover:text-black hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50' style={{ backgroundColor: '#DAA520', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
               Send Email
             </Button>
 
