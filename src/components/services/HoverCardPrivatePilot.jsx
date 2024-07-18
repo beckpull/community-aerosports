@@ -7,7 +7,7 @@ const HoverCardPrivatePilot = ({ onClose }) => {
       <div className="bg-white rounded-lg shadow-lg relative max-w-4xl mx-4 max-h-[80vh] overflow-auto p-6 pt-12">
         <button
           onClick={onClose}
-          className="absolute top-5  right-5 border-2 border-gray-500 p-1 lg:p-2 rounded hover:border-gray-600 hover:bg-gray-100 text-gray-500 hover:text-gray-700"
+          className="absolute top-3 pl-2 pr-2 right-3 border-2 border-gray-500 p-1 lg:p-2  rounded hover:border-gray-600 hover:bg-gray-100 text-gray-500 hover:text-gray-700"
         >
           &times;
         </button>
