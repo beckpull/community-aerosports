@@ -62,3 +62,9 @@ main {
 .read-the-docs {
   color: #888;
 } */
+
+
+.marks:hover {
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px #bbcee4; /* Example shadow: black, 2px right and down, 4px blur */
+}
