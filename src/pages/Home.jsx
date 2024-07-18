@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
 import Image from '../assets/images/cover.png';
-import InstagramButtonIcon from "@/components/icons/instagramIcon";
-import FacebookIcon from "@/components/icons/facebookIcon";
-import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
-import WhatsAppIcon from '@/components/icons/whatsappIcon';
+import Banner from '../assets/images/banner2.jpg';
+// import InstagramButtonIcon from "@/components/icons/instagramIcon";
+// import FacebookIcon from "@/components/icons/facebookIcon";
+// import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
+// import WhatsAppIcon from '@/components/icons/whatsappIcon';
 import CountUpComponent from "@/components/countUp/countUp.jsx";
 import TeamCard from "@/components/teamCard/teamCard.jsx";
 import CarrouselTestimonials from "@/components/testimonials/carrouselTestimonials.jsx";
 import LocationMap from "@/components/mapHomePage/map.jsx";
+
 
 function Home() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 762);
@@ -22,9 +25,36 @@ function Home() {
     // Clean up the event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   return (
     <>
+      <div style={{
+        position: 'relative',
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url(${Banner})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}>
+        <div style={{ textAlign: 'center', padding: '10px 0' }}>
+
+          <i className="fas fa-phone mr-2 text-white"></i>
+          <span style={{ marginRight: '20px', color: 'white' }}>
+            Ph :<strong><a href="tel:+15054023438"> +1 (505) 402-3438</a></strong>
+          </span>
+
+          <span style={{ color: 'white' }}className='font-bold ml-5'>
+          <a href="https://www.google.com/maps/search/?api=1&query=Four+Corners+Regional+Airport+KFMN+1300+W+Navajo+St+Farmington+NM+87401" target="_blank" rel="noopener noreferrer">Hours: M-F 9:00 AM - 5:00 PM</a>
+          </span>
+
+          <a href="mailto:fmnflyer@outlook.com?subject=GetAQuote Subject&body=Email Body" target="_blank" rel="noopener noreferrer">
+            <Button className='m-2 ml-9 lg:text-lg md:text-base sm:text-base  text-black font-bold hover:bg-white hover:text-black hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50' style={{ backgroundColor: '#DAA520', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
+              Send Email
+            </Button>
+
+          </a>
+        </div>
+        {/* <img src={Image2} alt="banner" style={{ width: '100%', height: '50vh', objectFit: 'cover',  }} /> */}
+
+      </div>
       <div style={{ position: 'relative' }}>
         <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover', display: isLargeScreen ? 'block' : 'none' }} />
         <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', flexDirection: 'column' }}>
