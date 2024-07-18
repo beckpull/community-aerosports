@@ -18,7 +18,7 @@ const LocationMap = () => {
         zIndex: 1 // Ensure it’s not interfering with hover card z-index
       }}
     >
-      <MapContainer center={kfmnPosition} zoom={8} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+      <MapContainer center={[36.9453, -107.9913]} zoom={8} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

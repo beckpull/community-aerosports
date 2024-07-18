@@ -35,12 +35,13 @@ function Services() {
           <Card>
             <h2 className="text-2xl text-center font-bold mb-4">Private Pilot License</h2>
             <p className="text-center text-gray-600">Learn to fly and obtain your Private Pilot License with our comprehensive training program.</p>
+            <p className="text-center text-gray-600"><i>20 hours flight time with instructor (minumum)</i></p>
             <div className="flex justify-center mt-4">
               <button 
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline text-sm"
                 onClick={() => handleLearnMoreClick('PrivatePilot')}
               >
-                Learn More
+                <i>Learn More - FAA requirements</i>
               </button>
             </div>
           </Card>
@@ -49,13 +50,14 @@ function Services() {
           <Card>
             <h2 className="text-2xl text-center font-bold mb-4">Instrumental Ratings</h2>
             <p className="text-center text-gray-600">Enhance your flying skills with our Instrument Rating training.</p>
+            <p className="text-center text-gray-600"><i>20 hours flight time, 20 hours on Redbird simulator (minumum)</i></p>
             <div className="flex justify-center mt-4">
               <button 
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:underline text-sm"
                 onClick={() => handleLearnMoreClick('InstrumentalRatings')}
               >
-                Learn More
-              </button>
+                <i>Learn More - FAA requirements</i>
+                </button>
             </div>
           </Card>
 

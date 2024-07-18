@@ -39,13 +39,13 @@ export default function CountUpComponent() {
         </p>
       </div>
       <div className="count-down mb-5 mt-5 rounded border-customWhite border-2 p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-items-center">
           {/* Years of Experience */}
           <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon1} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <div id="targetId" className="text-black font-bold text-2xl"></div>
-              <span className="text-black font-bold text-2xl">+</span>
+              <div id="targetId" className="text-black font-bold xl-text"></div>
+              <span className="text-black font-bold xl-text">+</span>
             </div>
             <p className="text-neutral mt-1 ">Years Of Experience</p>
           </div>
@@ -54,18 +54,18 @@ export default function CountUpComponent() {
           <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon2} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <span className="text-black font-bold text-2xl">Private</span>
+              <span className="text-black font-bold xl-text">Private</span>
             </div>
-            <p className="text-neutral text-sm">Flying Experience</p>
+            <p className="text-neutral ">Flying Experience</p>
           </div>
 
           {/* Graduated Pilots */}
           <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon3} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <span className="text-black font-bold text-2xl">Aeromedical</span>
+              <span className="text-black font-bold xl-text">Aeromedical</span>
             </div>
-            <p className="text-neutral text-sm">Professional Experience</p>
+            <p className="text-neutral">Professional Experience</p>
 
           </div>
 
@@ -73,9 +73,9 @@ export default function CountUpComponent() {
           <div className="bg-customWhite rounded-circle rounded-full custom-size flex flex-col items-center mb-2 mt-2">
             <img src={Icon4} alt="Icon Description" className="mt-5" style={{ height: '80px', width: '80px' }} />
             <div className="flex items-center">
-              <span className="text-black font-bold text-2xl">Corporate</span>
+              <span className="text-black font-bold xl-text">Corporate</span>
             </div>
-            <p className="text-neutral text-sm">Professional Experience</p>
+            <p className="text-neutral">Professional Experience</p>
           </div>
         </div>
       </div>
