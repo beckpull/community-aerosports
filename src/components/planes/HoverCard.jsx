@@ -7,7 +7,7 @@ const HoverCard = ({ plane, show, handleClose }) => (
     <div className="bg-white rounded-lg shadow-lg relative max-w-4xl mx-4 max-h-[80vh] overflow-auto p-6 pt-12">
       <button
         onClick={handleClose}
-        className="absolute top-5  right-5 border-2 border-gray-500 p-1 lg:p-2 rounded hover:border-gray-600 hover:bg-gray-100 text-gray-500 hover:text-gray-700"
+        className="absolute top-3  right-3 border-2 border-gray-500 p-2 rounded hover:border-gray-600 hover:bg-gray-100 text-gray-500 hover:text-gray-700 text-xl"
       >
         &times;
       </button>
