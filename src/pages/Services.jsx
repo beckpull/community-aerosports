@@ -29,7 +29,7 @@ function Services() {
         <HoverCardInstrumentalRatings onClose={handleCloseHoverCard} />
       )}
 
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8">
+      <div className="min-h-screen bg-black flex flex-col items-center p-8">
         <div className="max-w-4xl w-full">
           {/* Private Pilot License */}
           <Card>
