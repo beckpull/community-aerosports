@@ -71,30 +71,32 @@ const AirportInfo = () => (
     <AccordionItem value="item-4">
       <AccordionTrigger className='md:text-base lg:text-base text-sm tracking-wide'>Nearby Radio Navigation Aids</AccordionTrigger>
       <AccordionContent className='my-2.5 sm:text-sm md:text-base'>
-        <table className="table-auto w-full overflow-x-scroll">
-          <thead>
-            <tr className="bg-gray-200">
-              <th className="px-4 py-2 text-center">VOR radial/distance</th>
-              <th className="px-4 py-2 text-center">VOR name</th>
-              <th className="px-4 py-2 text-center">Frequency</th>
-              <th className="px-4 py-2 text-center">Variation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white border-b">
-              <td className="px-4 py-2 text-center">RSKr252/6.3</td>
-              <td className="px-4 py-2 text-center">RATTLESNAKE VORTAC</td>
-              <td className="px-4 py-2 text-center">115.30</td>
-              <td className="px-4 py-2 text-center">14E</td>
-            </tr>
-            <tr className="bg-white">
-              <td className="px-4 py-2 text-center">DROr209/33.8</td>
-              <td className="px-4 py-2 text-center">DURANGO VOR/DME</td>
-              <td className="px-4 py-2 text-center">116.55</td>
-              <td className="px-4 py-2 text-center">14E</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="table-auto min-w-full">
+            <thead>
+              <tr className="bg-gray-200">
+                <th className="px-4 py-2 text-center">VOR radial/distance</th>
+                <th className="px-4 py-2 text-center">VOR name</th>
+                <th className="px-4 py-2 text-center">Frequency</th>
+                <th className="px-4 py-2 text-center">Variation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white border-b">
+                <td className="px-4 py-2 text-center">RSKr252/6.3</td>
+                <td className="px-4 py-2 text-center">RATTLESNAKE VORTAC</td>
+                <td className="px-4 py-2 text-center">115.30</td>
+                <td className="px-4 py-2 text-center">14E</td>
+              </tr>
+              <tr className="bg-white">
+                <td className="px-4 py-2 text-center">DROr209/33.8</td>
+                <td className="px-4 py-2 text-center">DURANGO VOR/DME</td>
+                <td className="px-4 py-2 text-center">116.55</td>
+                <td className="px-4 py-2 text-center">14E</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </AccordionContent>
     </AccordionItem>
 
@@ -125,77 +127,79 @@ const AirportInfo = () => (
           </ul>
         </li>
         <li className='pb-8'><strong>Runway edge lights</strong>: 	medium intensity</li>
-        <table className="table-auto w-full overflow-x-scroll">
-          <thead>
-            <tr className="bg-gray-200 border-b">
-              <th className="px-4 py-2 text-center border-b"></th>
-              <th className="px-4 py-2 text-center border-b">Runway 7</th>
-              <th className="px-4 py-2 text-center border-b">Runway 25</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Latitude:</th>
-              <td className="px-4 py-2 text-center">36-44.465593N</td>
-              <td className="px-4 py-2 text-center">36-44.498110N</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Longitude:</th>
-              <td className="px-4 py-2 text-center">108-14.395637W</td>
-              <td className="px-4 py-2 text-center">108-13.023943W</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Elevation:</th>
-              <td className="px-4 py-2 text-center">5476.9 ft.</td>
-              <td className="px-4 py-2 text-center">5502.8 ft.</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Traffic pattern:</th>
-              <td className="px-4 py-2 text-center">left</td>
-              <td className="px-4 py-2 text-center">left</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Runway heading:</th>
-              <td className="px-4 py-2 text-center">076 magnetic, 088 true</td>
-              <td className="px-4 py-2 text-center">256 magnetic, 268 true</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Displaced threshold:</th>
-              <td className="px-4 py-2 text-center">239 ft.</td>
-              <td className="px-4 py-2 text-center">217 ft.</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Declared distances:</th>
-              <td className="px-4 py-2 text-center">TORA:6704 TODA:6704 ASDA:6487 LDA:6248</td>
-              <td className="px-4 py-2 text-center">TORA:6704 TODA:6704 ASDA:6465 LDA:6248</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Markings:</th>
-              <td className="px-4 py-2 text-center">precision, in good condition</td>
-              <td className="px-4 py-2 text-center">precision, in good condition</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Visual slope indicator:</th>
-              <td className="px-4 py-2 text-center">4-box VASI on left (3.00 degrees glide path)</td>
-              <td className="px-4 py-2 text-center">4-box VASI on left (3.00 degrees glide path)</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Runway end identifier lights:</th>
-              <td className="px-4 py-2 text-center"></td>
-              <td className="px-4 py-2 text-center">yes</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Touchdown point:</th>
-              <td className="px-4 py-2 text-center">yes, no lights</td>
-              <td className="px-4 py-2 text-center">yes, no lights</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Instrument approach:</th>
-              <td className="px-4 py-2 text-center"></td>
-              <td className="px-4 py-2 text-center">ILS/DME</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="table-auto min-w-full">
+            <thead>
+              <tr className="bg-gray-200 border-b">
+                <th className="px-4 py-2 text-center border-b"></th>
+                <th className="px-4 py-2 text-center border-b">Runway 7</th>
+                <th className="px-4 py-2 text-center border-b">Runway 25</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Latitude:</th>
+                <td className="px-4 py-2 text-center">36-44.465593N</td>
+                <td className="px-4 py-2 text-center">36-44.498110N</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Longitude:</th>
+                <td className="px-4 py-2 text-center">108-14.395637W</td>
+                <td className="px-4 py-2 text-center">108-13.023943W</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Elevation:</th>
+                <td className="px-4 py-2 text-center">5476.9 ft.</td>
+                <td className="px-4 py-2 text-center">5502.8 ft.</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Traffic pattern:</th>
+                <td className="px-4 py-2 text-center">left</td>
+                <td className="px-4 py-2 text-center">left</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Runway heading:</th>
+                <td className="px-4 py-2 text-center">076 magnetic, 088 true</td>
+                <td className="px-4 py-2 text-center">256 magnetic, 268 true</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Displaced threshold:</th>
+                <td className="px-4 py-2 text-center">239 ft.</td>
+                <td className="px-4 py-2 text-center">217 ft.</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Declared distances:</th>
+                <td className="px-4 py-2 text-center">TORA:6704 TODA:6704 ASDA:6487 LDA:6248</td>
+                <td className="px-4 py-2 text-center">TORA:6704 TODA:6704 ASDA:6465 LDA:6248</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Markings:</th>
+                <td className="px-4 py-2 text-center">precision, in good condition</td>
+                <td className="px-4 py-2 text-center">precision, in good condition</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Visual slope indicator:</th>
+                <td className="px-4 py-2 text-center">4-box VASI on left (3.00 degrees glide path)</td>
+                <td className="px-4 py-2 text-center">4-box VASI on left (3.00 degrees glide path)</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Runway end identifier lights:</th>
+                <td className="px-4 py-2 text-center"></td>
+                <td className="px-4 py-2 text-center">yes</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Touchdown point:</th>
+                <td className="px-4 py-2 text-center">yes, no lights</td>
+                <td className="px-4 py-2 text-center">yes, no lights</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Instrument approach:</th>
+                <td className="px-4 py-2 text-center"></td>
+                <td className="px-4 py-2 text-center">ILS/DME</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </AccordionContent>
     </AccordionItem>
 
@@ -212,72 +216,74 @@ const AirportInfo = () => (
           </ul>
         </li>
         <li className='pb-6'><strong>Runway edge lights</strong>: 	medium intensity</li>
-        <table className="table-auto w-full overflow-x-scroll">
-          <thead>
-            <tr className="bg-gray-200 border-b">
-              <th className="px-4 py-2 text-center border-b"></th>
-              <th className="px-4 py-2 text-center border-b">Runway 5</th>
-              <th className="px-4 py-2 text-center border-b">Runway 23</th>
-            </tr>
-          </thead>
-          <tbody>
-          <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Latitude:</th>
-              <td className="px-4 py-2 text-center">36-44.238783N</td>
-              <td className="px-4 py-2 text-center">36-44.697203N</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Longitude:</th>
-              <td className="px-4 py-2 text-center">108-14.487268W</td>
-              <td className="px-4 py-2 text-center">108-13.284470W</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Elevation:</th>
-              <td className="px-4 py-2 text-center">5471.6 ft.</td>
-              <td className="px-4 py-2 text-center">5503.7 ft.</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Traffic pattern:</th>
-              <td className="px-4 py-2 text-center">left</td>
-              <td className="px-4 py-2 text-center">left</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Runway heading:</th>
-              <td className="px-4 py-2 text-center">053 magnetic, 065 true</td>
-              <td className="px-4 py-2 text-center">233 magnetic, 245 true</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Displaced threshold:</th>
-              <td className="px-4 py-2 text-center">no</td>
-              <td className="px-4 py-2 text-center">511 ft.</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Declared distances:</th>
-              <td className="px-4 py-2 text-center">TORA:6501 TODA:6501 ASDA:5590 LDA:5590</td>
-              <td className="px-4 py-2 text-center">TORA:6501 TODA:6501 ASDA:6101 LDA:5590</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Markings:</th>
-              <td className="px-4 py-2 text-center">nonprecision, in good condition</td>
-              <td className="px-4 py-2 text-center">nonprecision, in good condition</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Visual slope indicator:</th>
-              <td className="px-4 py-2 text-center">4-light PAPI on left (3.00 degrees glide path)</td>
-              <td className="px-4 py-2 text-center">4-light PAPI on right (3.00 degrees glide path)</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Runway end identifier lights:</th>
-              <td className="px-4 py-2 text-center"></td>
-              <td className="px-4 py-2 text-center">yes</td>
-            </tr>
-            <tr className="bg-white border-b">
-              <th className="px-4 py-2 bg-gray-200 border-b">Touchdown point:</th>
-              <td className="px-4 py-2 text-center">yes, no lights</td>
-              <td className="px-4 py-2 text-center">yes, no lights</td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="table-auto min-w-full">
+            <thead>
+              <tr className="bg-gray-200 border-b">
+                <th className="px-4 py-2 text-center border-b"></th>
+                <th className="px-4 py-2 text-center border-b">Runway 5</th>
+                <th className="px-4 py-2 text-center border-b">Runway 23</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Latitude:</th>
+                <td className="px-4 py-2 text-center">36-44.238783N</td>
+                <td className="px-4 py-2 text-center">36-44.697203N</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Longitude:</th>
+                <td className="px-4 py-2 text-center">108-14.487268W</td>
+                <td className="px-4 py-2 text-center">108-13.284470W</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Elevation:</th>
+                <td className="px-4 py-2 text-center">5471.6 ft.</td>
+                <td className="px-4 py-2 text-center">5503.7 ft.</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Traffic pattern:</th>
+                <td className="px-4 py-2 text-center">left</td>
+                <td className="px-4 py-2 text-center">left</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Runway heading:</th>
+                <td className="px-4 py-2 text-center">053 magnetic, 065 true</td>
+                <td className="px-4 py-2 text-center">233 magnetic, 245 true</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Displaced threshold:</th>
+                <td className="px-4 py-2 text-center">no</td>
+                <td className="px-4 py-2 text-center">511 ft.</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Declared distances:</th>
+                <td className="px-4 py-2 text-center">TORA:6501 TODA:6501 ASDA:5590 LDA:5590</td>
+                <td className="px-4 py-2 text-center">TORA:6501 TODA:6501 ASDA:6101 LDA:5590</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Markings:</th>
+                <td className="px-4 py-2 text-center">nonprecision, in good condition</td>
+                <td className="px-4 py-2 text-center">nonprecision, in good condition</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Visual slope indicator:</th>
+                <td className="px-4 py-2 text-center">4-light PAPI on left (3.00 degrees glide path)</td>
+                <td className="px-4 py-2 text-center">4-light PAPI on right (3.00 degrees glide path)</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Runway end identifier lights:</th>
+                <td className="px-4 py-2 text-center"></td>
+                <td className="px-4 py-2 text-center">yes</td>
+              </tr>
+              <tr className="bg-white border-b">
+                <th className="px-4 py-2 bg-gray-200 border-b">Touchdown point:</th>
+                <td className="px-4 py-2 text-center">yes, no lights</td>
+                <td className="px-4 py-2 text-center">yes, no lights</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </AccordionContent>
     </AccordionItem>
 
