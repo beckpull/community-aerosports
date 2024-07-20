@@ -309,13 +309,13 @@ const AirportInfo = () => (
     <AccordionItem value="item-9">
       <AccordionTrigger className='md:text-base lg:text-base text-sm tracking-wide'>Airport Operational Statistics</AccordionTrigger>
       <AccordionContent className='my-2.5 sm:text-sm md:text-base'>
-        <li><strong>Aircraft based on the field</strong>: 	87401</li>
-        <li><strong>Single engine airplanes</strong>: 	87401</li>
-        <li><strong>Multi engine airplanes</strong>: 	87401</li>
-        <li><strong>Jet airplanes</strong>: 	87401</li>
-        <li><strong>Helicopters</strong>: 	87401</li>
-        <li><strong>Gliders airplanes</strong>: 	87401</li>
-        <li className='pb-6'><strong>Ultralights</strong>: 	87401</li>
+        <li><strong>Aircraft based on the field</strong>: 	111</li>
+        <li><strong>Single engine airplanes</strong>: 	90</li>
+        <li><strong>Multi engine airplanes</strong>: 	12</li>
+        <li><strong>Jet airplanes</strong>: 	1</li>
+        <li><strong>Helicopters</strong>: 	4</li>
+        <li><strong>Gliders airplanes</strong>: 	1</li>
+        <li className='pb-6'><strong>Ultralights</strong>: 	3</li>
         <li className='pb-2'><strong>Aircraft operations</strong>: 	avg 126/day *</li>
         <ul className='pl-4'>
           <li>- <i><strong>56%</strong> 	local general aviation</i></li>
