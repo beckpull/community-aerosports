@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FMNImage from '@/assets/images/kfmn.jpeg';
 import LocationMap from '@/components/services/SvsMap';
 import HoverCardPrivatePilot from '@/components/services/HoverCardPrivatePilot';
 import HoverCardInstrumentalRatings from '@/components/services/HoverCardInstrumentalRatings';
@@ -79,14 +80,24 @@ function Services() {
           <Card>
             <h2 className="text-2xl text-center font-bold mb-4">Training Grounds</h2>
             <p className="lg:text-xl md:text-lg text-center sm:text-base mt-4 ml-2 mr-2 mb-4">
-              Farmington offers an exceptional learning environment, with its unique climate providing varied flying conditions that prepare students for any situation. The proximity to Durango, CO, offers the added advantage of "mountain training", allowing you to master the skills needed for navigating mountainous terrain.
+              Farmington offers an exceptional learning environment. The Four Corners Regional Airport serves a population exceeding 125,000.  There are two runways at an elevation of 5,506 feet, full time Aircraft Rescue and Fire Fighting (ARFF), and an Air Traffic Control (ATC) tower, the Four Corners Regional Airport is a logical choice for general aviation and military operations. The proximity to KDRO also offers the added advantage of additional training scenerios, allowing students to master the skills needed for navigating mountainous terrain.
             </p>
+            <img style={styles.fmnimg} src={FMNImage}/>
             <LocationMap />
           </Card>
         </div>
       </div>
     </>
   );
+}
+
+const styles = {
+  fmnimg: {
+    width: 'auto',
+    height: '570px',
+    marginTop: '20px',
+    marginBottom: '20px',
+  }
 }
 
 export default Services;
