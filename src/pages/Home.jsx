@@ -66,7 +66,7 @@ function Home() {
               <i className="fas fa-clock mr-2 text-white"></i>
               <strong>
                 <a href="https://www.google.com/maps/search/?api=1&query=Four+Corners+Regional+Airport+KFMN+1300+W+Navajo+St+Farmington+NM+87401" target="_blank" rel="noopener noreferrer">
-                  M - F 9:00 AM - 5:00 PM
+                  M-F 0900 - 1700
                 </a>
               </strong>
             </span>
@@ -98,7 +98,7 @@ function Home() {
             Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!
           </h1>
           <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always 
+            Welcome to Community Aerosports where your dreams of flight become reality. Whether you’ve always 
             wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is 
             here to guide you every step of the way.
           </p>          

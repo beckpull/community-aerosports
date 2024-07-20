@@ -37,7 +37,7 @@ const planes = [
     name: 'Dusty',
     type: '1967 Cessna 172H',
     image: dusty5,
-    description: "My name is Dusty. I was born in Wichita, Kansas in 1967. I like helping beginning students learn to fly. I only have 145 horse power but it's a very smooth running engine. For years I had no name, until my previous owner had a grandson who decided that I should be called Dusty. Now that I'm living in New Mexico my name feels very appropriate.",
+    description: "My name is Dusty. I was born in Wichita, Kansas in 1967. I like helping beginning students learn to fly. I only have 145 horse power but it's a very smooth running engine. For years, I had no name until my previous owner had a grandson who decided that I should be called Dusty. Now that I'm living in New Mexico my name feels very appropriate.",
     moreImages: [dusty2, dusty3, dusty4, dusty1, dusty6]
   },
   {
@@ -45,7 +45,7 @@ const planes = [
     type: 'RedBird LD Simulator',
     image: red8,
     description: "My name is Red. I help advanced students learn proper instrument procedures to propel them into their flying careers. After 20 hours with me, students begin to understand the complexity of professional flying.",
-    moreImages: [red2, red3, red4, red5, red6, red7, red1, red9]
+    moreImages: [red2, red4, red5, red7, red1, red9]
   }
 ];
 
