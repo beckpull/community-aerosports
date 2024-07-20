@@ -71,7 +71,7 @@ const AirportInfo = () => (
     <AccordionItem value="item-4">
       <AccordionTrigger className='md:text-base lg:text-base text-sm tracking-wide'>Nearby Radio Navigation Aids</AccordionTrigger>
       <AccordionContent className='my-2.5 sm:text-sm md:text-base'>
-        <table className="table-auto w-full">
+        <table className="table-auto w-full overflow-x-scroll">
           <thead>
             <tr className="bg-gray-200">
               <th className="px-4 py-2 text-center">VOR radial/distance</th>
@@ -125,7 +125,7 @@ const AirportInfo = () => (
           </ul>
         </li>
         <li className='pb-8'><strong>Runway edge lights</strong>: 	medium intensity</li>
-        <table className="table-auto w-full">
+        <table className="table-auto w-full overflow-x-scroll">
           <thead>
             <tr className="bg-gray-200 border-b">
               <th className="px-4 py-2 text-center border-b"></th>
@@ -212,7 +212,7 @@ const AirportInfo = () => (
           </ul>
         </li>
         <li className='pb-6'><strong>Runway edge lights</strong>: 	medium intensity</li>
-        <table className="table-auto w-full">
+        <table className="table-auto w-full overflow-x-scroll">
           <thead>
             <tr className="bg-gray-200 border-b">
               <th className="px-4 py-2 text-center border-b"></th>
