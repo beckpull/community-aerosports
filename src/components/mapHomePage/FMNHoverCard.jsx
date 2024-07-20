@@ -1,7 +1,7 @@
 import React from 'react';
 import AirportAccordion from '@/components/mapHomePage/AirportInfo';
 
-const HoverCard = ({ image, onClose }) => {
+const HoverCard = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white rounded-lg shadow-lg relative max-w-4xl mx-4 max-h-[80vh] overflow-auto p-6 pt-12">
