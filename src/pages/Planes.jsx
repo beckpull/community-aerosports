@@ -30,7 +30,7 @@ const planes = [
     name: 'Rusty',
     type: '1967 Cessna 182K',
     image: rusty4,
-    description: "My name is Rusty. I was born in Wichita, Kansas in 1967. I presently fly on aerial survey missions and Instrument training flights. My panel, as you can see in my above pictures, has been updated for training purposes.",
+    description: "My name is Rusty. I was born in Wichita, Kansas in 1967. I presently fly on aerial survey missions and Instrument training flights. My panel, as you can see in my pictures, has been updated for training purposes.",
     moreImages: [rusty2, rusty1, rusty3, rusty5]
   },
   {
