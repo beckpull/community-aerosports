@@ -1,19 +1,68 @@
 import React from 'react';
+import AirportAccordion from '@/components/mapHomePage/AirportInfo';
 
 const HoverCard = ({ image, onClose }) => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-white p-4 rounded-lg shadow-lg overflow-auto max-h-[70%] w-[70%] relative">
+    <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50">
+      <div className="bg-white rounded-lg shadow-lg relative max-w-4xl mx-4 max-h-[80vh] overflow-auto p-6 pt-12">
         <button
-          className="absolute top-2 right-2 text-black"
           onClick={onClose}
+          className="absolute top-3 pl-2 pr-2 right-3 border-2 border-gray-500 p-1 lg:p-2  rounded hover:border-gray-600 hover:bg-gray-100 text-gray-500 hover:text-gray-700"
         >
-          ✖
+          &times;
         </button>
-        <img src={image} alt="Detailed view" className="w-full mb-4" />
+        <div className="relative bg-gray mt-2 h-full overflow-auto">
+          <h2 className="text-base text-center font-bold mb-2 tracking-wide">(KFMN) FAA Information effective 11 July 2024</h2>
+          <div style={styles.container}>
+            <h1 style={styles.title} className='font-semibold text-lg text-center tracking-normal'>Airport & Runway Information</h1>
+            <AirportAccordion />
+          </div>
+        </div>
       </div>
     </div>
   );
+};
+
+const styles = {
+  container: {
+    maxWidth: '1200px',
+    margin: '20px auto',
+    padding: '20px',
+    backgroundColor: '#fff',
+    borderRadius: '8px',
+    boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+  },
+  title: {
+    // fontSize: '1.5rem',
+    color: '#333',
+    marginBottom: '10px',
+  },
+  subtitle: {
+    fontSize: '1.5rem',
+    color: '#333',
+    borderBottom: '2px solid #eee',
+    paddingBottom: '10px',
+    marginBottom: '10px',
+  },
+  section: {
+    marginBottom: '20px',
+  },
+  paragraph: {
+    margin: '10px 0',
+  },
+  list: {
+    margin: '10px 0',
+    paddingLeft: '20px',
+  },
+  nestedList: {
+    margin: '10px 0',
+    paddingLeft: '20px',
+  },
+  citation: {
+    fontSize: '0.9em',
+    color: '#666',
+    marginTop: '10px',
+  },
 };
 
 export default HoverCard;

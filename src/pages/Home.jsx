@@ -29,18 +29,21 @@ function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [hoverCard, setHoverCard] = useState(null);
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
+  const handleHoverCardClick = () => {
+    setHoverCard(true);
   };
 
   const handleCloseHoverCard = () => {
-    setSelectedImage(null);
+    setHoverCard(false);
   };
 
   return (
     <>
+      {hoverCard === true && (
+        <HoverCard onClose={handleCloseHoverCard} />
+      )}
       <div style={{
         position: 'relative',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url(${Banner})`,
@@ -111,17 +114,9 @@ function Home() {
             With our expert instruction and comprehensive training programs, you’ll gain the confidence and 
             competence to soar high and explore new horizons.
           </p>
-
-
-
-
           <CountUpComponent />
-              <LocationMap style={{zIndex: 0}} className="w-full h-full" />
-          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Airport Information</p>
-          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN2)}>KFMN Runway Information</p>
-          {selectedImage && (
-            <HoverCard image={selectedImage} onClose={handleCloseHoverCard} />
-          )}
+          <LocationMap style={{zIndex: 0}} className="w-full h-full" />
+          <button className='cursor-pointer text-blue-500 hover:underline text-sm' onClick={handleHoverCardClick}>FAA Information: KFMN</button>
           <CarrouselTestimonials />
         </div>
       </div>
