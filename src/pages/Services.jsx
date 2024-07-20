@@ -38,7 +38,7 @@ function Services() {
             <p className="text-center text-gray-600">Learn to fly and obtain your Private Pilot License with our comprehensive training program.</p>
             <p className="text-center text-gray-600"><i>20 hours flight time with instructor (minumum)</i></p>
             <div className="flex justify-center mt-4">
-              <button 
+              <button
                 className="text-blue-500 hover:underline text-sm"
                 onClick={() => handleLearnMoreClick('PrivatePilot')}
               >
@@ -53,12 +53,12 @@ function Services() {
             <p className="text-center text-gray-600">Enhance your flying skills with our Instrument Rating training.</p>
             <p className="text-center text-gray-600"><i>20 hours flight time, 20 hours on Redbird simulator (minumum)</i></p>
             <div className="flex justify-center mt-4">
-              <button 
+              <button
                 className="text-blue-500 hover:underline text-sm"
                 onClick={() => handleLearnMoreClick('InstrumentalRatings')}
               >
                 <i>Learn More - FAA requirements</i>
-                </button>
+              </button>
             </div>
           </Card>
 
@@ -79,10 +79,9 @@ function Services() {
           {/* Placeholder for Map Component */}
           <Card>
             <h2 className="text-2xl text-center font-bold mb-4">Training Grounds</h2>
-            <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">
-              Farmington offers an exceptional learning environment. The Four Corners Regional Airport serves a population exceeding 125,000.  There are two runways at an elevation of 5,506 feet, full time Aircraft Rescue and Fire Fighting (ARFF), and an Air Traffic Control (ATC) tower.</p>
+            <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Farmington offers an exceptional learning environment. The Four Corners Regional Airport serves a population exceeding 125,000.  There are two runways at an elevation of 5,506 feet, full time Aircraft Rescue and Fire Fighting (ARFF), and an Air Traffic Control (ATC) tower.</p>
             <p className="lg:text-xl md:text-lg sm:text-base ml-2 mr-2 mb-4">The Four Corners Regional Airport is a logical choice for general aviation and military operations. The proximity to KDRO also offers the added advantage of additional training scenerios, allowing students to master the skills needed for navigating mountainous terrain.</p>
-            <img style={styles.fmnimg} src={FMNImage}/>
+            <img style={styles.fmnimg} src={FMNImage} />
             <LocationMap />
           </Card>
         </div>
