@@ -34,7 +34,7 @@ export default function CountUpComponent() {
   return (
     <div className="bg-white p-3 ml-3 mr-3">
       <div className="banner mt-5">
-        <p className="text-lg banner-text2 animate__animated animate__zoomInDown animate__delay-1s text-black font-semibold">
+        <p className="text-lg banner-text2 animate__animated animate__zoomInDown animate__delay-1s text-black font-semibold text-center">
           Trusted by General Aviation ✈️
         </p>
       </div>
