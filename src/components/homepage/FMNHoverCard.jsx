@@ -1,5 +1,5 @@
 import React from 'react';
-import AirportAccordion from '@/components/mapHomePage/AirportInfo';
+import AirportInfo from '@/components/homepage/AirportInfo';
 
 const HoverCard = ({ onClose }) => {
   return (
@@ -15,7 +15,7 @@ const HoverCard = ({ onClose }) => {
           <h2 className="text-base text-center font-bold mb-2 tracking-wide">(KFMN) FAA Information effective 11 July 2024</h2>
           <div style={styles.container}>
             <h1 style={styles.title} className='font-semibold text-lg text-center tracking-normal'>Airport & Runway Information</h1>
-            <AirportAccordion />
+            <AirportInfo />
           </div>
         </div>
       </div>

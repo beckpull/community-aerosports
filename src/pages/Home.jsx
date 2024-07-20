@@ -9,10 +9,10 @@ import Banner from '../assets/images/banner2.jpg';
 import CountUpComponent from "@/components/countUp/countUp.jsx";
 // import TeamCard from "@/components/teamCard/teamCard.jsx";
 import CarrouselTestimonials from "@/components/testimonials/carrouselTestimonials.jsx";
-import LocationMap from "@/components/mapHomePage/map.jsx";
+import LocationMap from "@/components/homepage/map.jsx";
 import FMN1 from '@/assets/images/faafmn.png';
 import FMN2 from '@/assets/images/runwayfmn.png';
-import HoverCard from '@/components/mapHomePage/FMNHoverCard';
+import HoverCard from '@/components/homepage/FMNHoverCard';
 
 
 function Home() {
@@ -116,7 +116,7 @@ function Home() {
           </p>
           <CountUpComponent />
           <LocationMap style={{zIndex: 0}} className="w-full h-full" />
-          <button className='cursor-pointer text-blue-500 hover:underline text-sm' onClick={handleHoverCardClick}>FAA Information: KFMN</button>
+          <button className=' mt-6 cursor-pointer border-2 border-blue-400 p-1 lg:p-2 rounded hover:border-gray-100 hover:bg-blue-400 hover:text-gray-100 text-blue-500 hover:underline lg:text-lg md:text-base text-sm' onClick={handleHoverCardClick}>Offical FAA Information on KFMN</button>
           <CarrouselTestimonials />
         </div>
       </div>
