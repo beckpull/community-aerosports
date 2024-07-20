@@ -7,6 +7,7 @@ import Banner from '../assets/images/banner2.jpg';
 // import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
 // import WhatsAppIcon from '@/components/icons/whatsappIcon';
 import CountUpComponent from "@/components/countUp/countUp.jsx";
+// import TeamCard from "@/components/teamCard/teamCard.jsx";
 import CarrouselTestimonials from "@/components/testimonials/carrouselTestimonials.jsx";
 import LocationMap from "@/components/mapHomePage/map.jsx";
 import FMN1 from '@/assets/images/faafmn.png';
@@ -24,6 +25,7 @@ function Home() {
 
     window.addEventListener('resize', handleResize);
 
+    // Clean up the event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -39,13 +41,6 @@ function Home() {
 
   return (
     <>
-    <div style={{ position: 'relative' }}>
-      <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover', display: isLargeScreen ? 'block' : 'none' }} />
-      <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', flexDirection: 'column' }}>
-        {/* Social Media Icons */}
-
-  return (
-    <>
       <div style={{
         position: 'relative',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url(${Banner})`,
@@ -53,7 +48,7 @@ function Home() {
         backgroundPosition: 'center'
       }}>
         <div className='text-center p-1'>
-          <div className="flex sm:flex-row justify-center items-center mt-1 mb-2">
+          <div className="flex sm:flex-row justify-center items-center mt-1 mb-1">
             
             <span className='text-white font-medium mr-5 md:mr-15 mt-1 text-xs md:text-sm'>
               <i className="fas fa-phone mr-2 text-white"></i>
@@ -94,59 +89,23 @@ function Home() {
           <InstagramButtonIcon /> */}
           {/* <LinkedinButtonIcon /> */}
 
-
         </div>
-
         <div className="text-center">
-          <h1 className="lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2 mr-2">Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!</h1>
+          <h1 className="lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2 mr-2 mt-8">Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!</h1>
           <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is here to guide you every step of the way.</p>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched only by her dedication to student success.</p>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. With our expert instruction and comprehensive training programs, you’ll gain the confidence and competence to soar high and explore new horizons.</p>
+          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched only by her dedication to student success.
 
-        <div>
-          <h1 className="text-center lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2  mr-2">
-            Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!
-          </h1>
-          <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always 
-            wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is 
-            here to guide you every step of the way.
           </p>
-          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned 
-            pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and 
-            held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. 
-            Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched 
-            only by her dedication to student success.
+          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. With our expert instruction and comprehensive training programs, you’ll gain the confidence and competence to soar high and explore new horizons.
           </p>
-          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. 
-            With our expert instruction and comprehensive training programs, you’ll gain the confidence and 
-            competence to soar high and explore new horizons.
-          </p>
+
+
+
 
           <CountUpComponent />
-          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4"> */}
-            {/* <div className="col-span-2"> */}
               <LocationMap style={{zIndex: 0}} className="w-full h-full" />
-            {/* </div> */}
-            {/* <div className="flex flex-col items-center justify-between space-y-4">
-              <img
-                className="w-1/2 cursor-pointer mb-4"
-                src={FMN1}
-                alt="FMN1"
-                onClick={() => handleImageClick(FMN1)}
-              />
-              <img
-                className="w-1/2 cursor-pointer"
-                src={FMN2}
-                alt="FMN2"
-                onClick={() => handleImageClick(FMN2)}
-              />
-            </div>
-          </div> */}
           <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Airport Information</p>
-          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Runway Information</p>
+          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN2)}>KFMN Runway Information</p>
           {selectedImage && (
             <HoverCard image={selectedImage} onClose={handleCloseHoverCard} />
           )}
