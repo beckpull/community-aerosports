@@ -34,10 +34,10 @@ function Home() {
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}>
-        <div className='text-center p-2.5'>
-          <div className="flex sm:flex-row justify-center items-center mt-2 mb-2">
+        <div className='text-center p-1'>
+          <div className="flex sm:flex-row justify-center items-center mt-1 mb-1">
             
-            <span className='text-white font-medium mr-5 md:mr-15 mt-2 text-sm md:text-base'>
+            <span className='text-white font-medium mr-5 md:mr-15 mt-1 text-xs md:text-sm'>
               <i className="fas fa-phone mr-2 text-white"></i>
               <strong>
                 <a href="tel:+15054023438"> 
@@ -46,7 +46,7 @@ function Home() {
               </strong>
             </span>
 
-            <span className='text-white font-medium ml-5 mt-2 text-sm md:text-base'>
+            <span className='text-white font-medium ml-5 mt-1 text-xs md:text-sm'>
               <i className="fas fa-clock mr-2 text-white"></i>
               <strong>
                 <a href="https://www.google.com/maps/search/?api=1&query=Four+Corners+Regional+Airport+KFMN+1300+W+Navajo+St+Farmington+NM+87401" target="_blank" rel="noopener noreferrer">
@@ -58,8 +58,8 @@ function Home() {
           </div>
 
 
-          <a href="mailto:fmnflyer@outlook.com?subject=GetAQuote Subject&body=Email Body" target="_blank" rel="noopener noreferrer">
-            <Button className='m-2 ml-9 lg:text-lg md:text-base sm:text-base  text-black font-medium hover:bg-white hover:text-black hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50' style={{ backgroundColor: '#DAA520', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px' }}>
+          <a href="mailto:fmnflyer@outlook.com?subject=Get%20a%20Quote " target="_blank" rel="noopener noreferrer">
+            <Button className='mb-1 ml-9 text-xs md:text-sm  text-white font-medium  hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50 hover:text-customWhite' style={{ backgroundColor: '#DAA520',  borderRadius: '5px' }}>
               Send Email
             </Button>
 

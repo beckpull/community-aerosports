@@ -96,102 +96,117 @@ function ContactForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="p-8 bg-white rounded-lg mt-10">
-        <div className="mb-6">
-          <label className="block text-gray-700 text-lg font-semibold mb-2">Name</label>
-          <input
-            name="fullName"
-            value={fullName}
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="text"
-            placeholder="e.g. First Last"
-            onChange={handleChange}
-          />
-          {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-gray-700 text-lg font-semibold mb-2">Email</label>
-          <div className="relative">
+      <div className="flex justify-center items-center">
+        <form onSubmit={handleSubmit} className="p-5 md:w-9/12 w-full ml-4 mr-4 mb-4 bg-gray-100 rounded-lg mt-5">
+          <h2 className="text-2xl font-extrabold  mt-5 mb-5 tracking-normal">Get in touch</h2>
+          <p className="text-black mb-6">We are here for you! How can we help?</p>
+          <h2 className="text-xl font-bold tracking-normal mt-4 md:mt-8 mb-5 md:mb-10">Drop us a line</h2>
+          <div className="mb-6">
+            <label className="block text-gray-700 text-base font-semibold ">Your name</label>
             <input
-              name="email"
-              value={email}
-              className={`shadow appearance-none border ${!emailValid ? 'border-red-500' : ''} rounded w-full py-3 px-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
-              type="email"
-              placeholder="e.g. email@example.com"
+              name="fullName"
+              value={fullName}
+              className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Please enter your name"
               onChange={handleChange}
             />
-            <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
-              <img src={emailIcon} className="h-5 w-5 text-grey-700" stroke="currentColor">
-              </img>
-            </span>
+            {nameRequired && <p className="text-red-500 text-xs mt-2">Name is required.</p>}
           </div>
-          {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
-          {!emailValid && email && <p className="text-red-500 text-xs mt-2">Please enter a valid email address.</p>}
-        </div>
 
-        <div className="mb-6">
-          <label className="block text-gray-700 text-lg font-semibold mb-2">Phone</label>
-          <PhoneInput
-            name="phone"
-            value={phone}
-            placeholder="Enter phone number"
-            className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
-            onChange={handlePhoneChange}
-            defaultCountry="US" 
+          <div className="mb-6">
+            <label className="block text-gray-700 text-base font-semibold ">Email</label>
+            <div className="relative">
+              <input
+                name="email"
+                value={email}
+                className={`shadow appearance-none border ${!emailValid ? 'border-red-500' : ''} rounded w-full py-3 px-4 pl-10 text-gray-700 leading-tight focus:outline-none focus:shadow-outline`}
+                type="email"
+                placeholder="e.g. email@example.com"
+                onChange={handleChange}
+              />
+              <span className="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400">
+                <img src={emailIcon} className="h-5 w-5 text-grey-700" stroke="currentColor">
+                </img>
+              </span>
+            </div>
+            {emailRequired && <p className="text-red-500 text-xs mt-2">Email is required.</p>}
+            {!emailValid && email && <p className="text-red-500 text-xs mt-2">Please enter a valid email address.</p>}
+          </div>
+
+          <div className="mb-6">
+            <label className="block text-gray-700 text-base font-semibold ">Phone</label>
+            <PhoneInput
+              name="phone"
+              value={phone}
+              placeholder="Enter phone number"
+              className='shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-white'
+              onChange={handlePhoneChange}
+              defaultCountry="US"
             />
-          {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone Number is required.</p>}
-          {/* <input
-            name="phone"
-            value={phone}
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="tel"
-            placeholder="e.g. (123) 456-7890"
-            onChange={handleChange}
-          /> */}
-          {/* {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone number is required.</p>} */}
-        </div>
-
-        <div className="mb-6">
-          <label className="block text-gray-700 text-lg font-semibold mb-2">I am interested in:</label>
-          <select
-            name="inquiry"
-            value={inquiry}
-            onChange={handleChange}
-            className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-3 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          >
-            <option value="" disabled>Select an option</option>
-            <option value="Private Pilot License">Private Pilot License</option>
-            <option value="Instrument Rating">Instrument Rating</option>
-            <option value="Other">Other</option>
-          </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone Number is required.</p>}
+            {/* <input
+              name="phone"
+              value={phone}
+              className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="tel"
+              placeholder="e.g. (123) 456-7890"
+              onChange={handleChange}
+            /> */}
+            {/* {phoneRequired && <p className="text-red-500 text-xs mt-2">Phone number is required.</p>} */}
           </div>
-        </div>
 
-        <div className="mb-6">
-          <label className="block text-gray-700 text-lg font-semibold mb-2">Message</label>
-          <textarea
-            name="message"
-            className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Message for Community Aerosports"
-            value={message}
-            onChange={handleChange}
-            rows="5"
-          ></textarea>
-          {messageRequired && <p className="text-red-500 text-xs mt-2">Message is required.</p>}
-        </div>
+          <div className="mb-6">
+            <label className="block text-gray-700 text-base font-semibold ">I am interested in:</label>
+            <div className="relative">
+              <select
+                name="inquiry"
+                value={inquiry}
+                onChange={handleChange}
+                className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-3 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+              >
+                <option value="" disabled >
+                  Select an option
+                </option>
+                <option value="Private Pilot License">Private Pilot License</option>
+                <option value="Instrument Rating">Instrument Rating</option>
+                <option value="Other">Other</option>
+              </select>
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg
+                  className="fill-current h-4 w-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg>
+              </div>
+            </div>
+          </div>
 
-        <div className="flex items-center justify-between">
-          <button type="submit" disabled={state.submitting} className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline">
-            Send
-          </button>
-          <button type="button" className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline" onClick={handleCancel}>
-            Cancel
-          </button>
-        </div>
-      </form>
+          <div className="mb-6">
+            <label className="block text-gray-700 text-base font-semibold ">Message</label>
+            <textarea
+              name="message"
+              className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              placeholder="Enter your message here"
+              value={message}
+              onChange={handleChange}
+              rows="5"
+            ></textarea>
+            {messageRequired && <p className="text-red-500 text-xs mt-2">Message is required.</p>}
+          </div>
+
+          <div className="flex items-center justify-between">
+            <button type="submit" disabled={state.submitting} className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline">
+              Send
+            </button>
+            <button type="button" className="bg-gray-600 hover:bg-gray-800 text-white font-bold py-3 px-6 rounded focus:outline-none focus:shadow-outline" onClick={handleCancel}>
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 }
