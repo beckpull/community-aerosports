@@ -17,8 +17,8 @@ const LocationMap = () => {
   const position = [36.7391, -108.2287];
 
   return (
-    <div className="mt-5" style={{ height: '400px', width: '75%', margin: '0 auto', marginTop: '1.25rem', alignItems: 'center', zIndex: 0 }}>
-      <MapContainer center={position} zoom={12} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+    <div className="mt-5" style={{ height: '400px', width: '75%', margin: '0 auto', marginTop: '1.25rem', alignItems: 'center' }}>
+      <MapContainer center={position} zoom={12} scrollWheelZoom={false} style={{ height: '100%', width: '100%', zIndex: 0 }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> '
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
