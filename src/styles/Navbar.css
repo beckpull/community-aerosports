@@ -62,7 +62,8 @@
 .navbar-background-image-large {
   /* Example styles */
   width: 100%;
-  height: auto; /* Adjust height as needed */
+  height: 50vh; /* Adjust height as needed */
+  
   /* Additional styling */
 }
 
