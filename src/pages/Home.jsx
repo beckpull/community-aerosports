@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Image from '../assets/images/cover.png';
-import InstagramButtonIcon from "@/components/icons/instagramIcon";
-import FacebookIcon from "@/components/icons/facebookIcon";
-import LinkedinButtonIcon from "@/components/icons/linkedInIcon";
-import WhatsAppIcon from '@/components/icons/whatsappIcon';
 import CountUpComponent from "@/components/countUp/countUp.jsx";
-import TeamCard from "@/components/teamCard/teamCard.jsx";
 import CarrouselTestimonials from "@/components/testimonials/carrouselTestimonials.jsx";
 import LocationMap from "@/components/mapHomePage/map.jsx";
+import FMN1 from '@/assets/images/faafmn.png';
+import FMN2 from '@/assets/images/runwayfmn.png';
+import HoverCard from '@/components/mapHomePage/FMNHoverCard';
 
 function Home() {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 762);
@@ -19,43 +17,61 @@ function Home() {
 
     window.addEventListener('resize', handleResize);
 
-    // Clean up the event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setSelectedImage(image);
+  };
+
+  const handleCloseHoverCard = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <>
-      <div style={{ position: 'relative' }}>
-        <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover', display: isLargeScreen ? 'block' : 'none' }} />
-        <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', flexDirection: 'column' }}>
-          {/* <WhatsAppIcon />
-          <FacebookIcon />
-          <InstagramButtonIcon /> */}
-          {/* <LinkedinButtonIcon /> */}
-
+    <div style={{ position: 'relative' }}>
+      <img src={Image} alt="banner-plane" style={{ width: '100%', height: '50vh', objectFit: 'cover', display: isLargeScreen ? 'block' : 'none' }} />
+      <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', flexDirection: 'column' }}>
+        {/* Social Media Icons */}
         </div>
         <div className="text-center">
-          <h1 className="lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2 mr-2 mt-8">Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!</h1>
+          <h1 className="lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2 mr-2">Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!</h1>
           <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is here to guide you every step of the way.</p>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched only by her dedication to student success.
-
-          </p>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. With our expert instruction and comprehensive training programs, you’ll gain the confidence and competence to soar high and explore new horizons.
-          </p>
-
-
-
-
+          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched only by her dedication to student success.</p>
+          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. With our expert instruction and comprehensive training programs, you’ll gain the confidence and competence to soar high and explore new horizons.</p>
           <CountUpComponent />
-          {/* <TeamCard /> */}
-          <LocationMap />
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4"> */}
+            {/* <div className="col-span-2"> */}
+              <LocationMap style={{zIndex: 0}} className="w-full h-full" />
+            {/* </div> */}
+            {/* <div className="flex flex-col items-center justify-between space-y-4">
+              <img
+                className="w-1/2 cursor-pointer mb-4"
+                src={FMN1}
+                alt="FMN1"
+                onClick={() => handleImageClick(FMN1)}
+              />
+              <img
+                className="w-1/2 cursor-pointer"
+                src={FMN2}
+                alt="FMN2"
+                onClick={() => handleImageClick(FMN2)}
+              />
+            </div>
+          </div> */}
+          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Airport Information</p>
+          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Runway Information</p>
+          {selectedImage && (
+            <HoverCard image={selectedImage} onClose={handleCloseHoverCard} />
+          )}
           <CarrouselTestimonials />
         </div>
       </div>
     </>
   );
 }
-
-
 
 export default Home;
