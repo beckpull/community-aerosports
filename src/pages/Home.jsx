@@ -91,12 +91,25 @@ function Home() {
 
         </div>
         <div className="text-center">
-          <h1 className="lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2 mr-2 mt-8">Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!</h1>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is here to guide you every step of the way.</p>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched only by her dedication to student success.
-
+        <h1 className="text-center lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2  mr-2">
+            Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!
+          </h1>
+          <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
+            Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always 
+            wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is 
+            here to guide you every step of the way.
+          </p>          
+          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
+            Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned 
+            pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and 
+            held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. 
+            Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched 
+            only by her dedication to student success.
           </p>
-          <p className="lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4">Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. With our expert instruction and comprehensive training programs, you’ll gain the confidence and competence to soar high and explore new horizons.
+          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
+            Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. 
+            With our expert instruction and comprehensive training programs, you’ll gain the confidence and 
+            competence to soar high and explore new horizons.
           </p>
 
 
