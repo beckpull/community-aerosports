@@ -23,7 +23,7 @@
 }
 
 .navbar-image-container.homepage {
-  height: 60vh; /* Apply homepage specific height */
+  height: 50vh; /* Apply homepage specific height */
 }
 
 /* Media query for desktop screen */
@@ -34,6 +34,7 @@
 }
 
 
+/* This is used for the image in the hamburger icon-navbar- mobile- */
 @media (max-width: 762px) {
   .navbar-background-image {
     position: absolute;
@@ -62,7 +63,8 @@
 .navbar-background-image-large {
   /* Example styles */
   width: 100%;
-  height: 50vh; /* Adjust height as needed */
+  height: 30vh; /* Adjust height as needed */
+  object-fit: cover;
   
   /* Additional styling */
 }
