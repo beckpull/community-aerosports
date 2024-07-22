@@ -48,13 +48,13 @@ function Home() {
         backgroundPosition: 'center'
       }}>
         <div className='text-center p-1'>
-          <div className="flex sm:flex-row justify-center items-center mt-1 mb-1">
-            
+          <div className="flex sm:flex-row justify-center items-center mt-1 mb-3">
+
             <span className='text-white font-medium mr-5 md:mr-15 mt-1 text-xs md:text-sm'>
               <i className="fas fa-phone mr-2 text-white"></i>
               <strong>
-                <a href="tel:+15054023438"> 
-                +1 (505) 402-3438
+                <a href="tel:+15054023438">
+                  +1 (505) 402-3438
                 </a>
               </strong>
             </span>
@@ -72,7 +72,7 @@ function Home() {
 
 
           <a href="mailto:fmnflyer@outlook.com?subject=Get%20a%20Quote " target="_blank" rel="noopener noreferrer">
-            <Button className='mb-1 ml-9 text-xs md:text-sm  text-white font-medium  hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50 hover:text-customWhite' style={{ backgroundColor: '#DAA520',  borderRadius: '5px' }}>
+            <Button className='mb-1 ml-9 text-xs md:text-sm  text-white font-medium  hover:border-mainYellow hover:border-2 hover:shadow-lg hover:shadow-yellow-500/50 hover:text-customWhite' style={{ backgroundColor: '#DAA520', borderRadius: '5px' }}>
               Send Email
             </Button>
 
@@ -90,25 +90,25 @@ function Home() {
           {/* <LinkedinButtonIcon /> */}
 
         </div>
-        <div className="text-center">
-        <h1 className="text-center lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-2  mr-2">
+        <div>
+          <h1 style={{ lineHeight: '1.5' }}  className="text-left lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-3  mr-2">
             Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!
           </h1>
-          <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always 
-            wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is 
+          <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-3 mr-2 mb-4 md:ml-4">
+            Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always
+            wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is
             here to guide you every step of the way.
-          </p>          
-          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned 
-            pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and 
-            held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school. 
-            Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched 
+          </p>
+          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-3 mr-2 mb-4 md:ml-4">
+            Located in the heart of Farmington, NM, Community Aerosports is led by Russell Gervase, a seasoned
+            pilot with 27 years of diverse aviation experience. Russell has flown a wide variety of planes and
+            held numerous aviation roles, bringing a wealth of knowledge and expertise to our flight school.
+            Alongside Russell is Emily, a dynamic and skilled co-instructor whose passion for aviation is matched
             only by her dedication to student success.
           </p>
-          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
-            Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation. 
-            With our expert instruction and comprehensive training programs, you’ll gain the confidence and 
+          <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-3 mr-2 mb-4 md:ml-4">
+            Join us at Community Aerosports and embark on an unforgettable journey into the world of aviation.
+            With our expert instruction and comprehensive training programs, you’ll gain the confidence and
             competence to soar high and explore new horizons.
           </p>
 
@@ -116,7 +116,7 @@ function Home() {
 
 
           <CountUpComponent />
-              <LocationMap style={{zIndex: 0}} className="w-full h-full" />
+          <LocationMap style={{ zIndex: 0 }} className="w-full h-full" />
           <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Airport Information</p>
           <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN2)}>KFMN Runway Information</p>
           {selectedImage && (

@@ -46,9 +46,9 @@ function NavTabs() {
 
   const navbarClass = () => {
     if (isActive) {
-      return "p-3 flex items-center justify-between flex-wrap navbar-transparent shadow-md";
+      return "p-1 flex items-center justify-between flex-wrap navbar-transparent shadow-md";
     } else {
-      return "p-3 flex items-center justify-between flex-wrap bg-white  shadow-md";
+      return "p-1 flex items-center justify-between flex-wrap bg-white  shadow-md";
     }
   };
 
@@ -60,11 +60,11 @@ function NavTabs() {
     <div className='navbar-image-container'>
       <nav className={navbarClass()}>
         <div className="flex items-center flex-shrink-0 text-black">
-          <img src={logo} alt="logo" className='h-16 w-16'></img>
-          <span className='font-bold lg:text-3xl md:text-xl text-xl tracking-tight' id="nav-name" style={{ textShadow: '2px 2px rgba(0, 0, 0, 0.1)' }}>Community Aerosports LLC</span>
+          <img src={logo} alt="logo" className='h-20 w-20'></img>
+          <span className='font-bold lg:text-3xl md:text-xl text-xl md:tracking-tight tracking-tighter' id="nav-name" style={{ textShadow: '2px 2px rgba(0, 0, 0, 0.1)' }}>Community Aerosports LLC</span>
         </div>
         <div className="block md:hidden mr-2">
-          <button onClick={toggleMenu} className="flex flex-col justify-around items-center w-10 h-10 rounded mt-2 mb-2 bg-customWhite hover:bg-customGray p-2">
+          <button onClick={toggleMenu} className="flex flex-col justify-around items-center w-10 h-10 rounded mt-2 mb-2 bg-greenLogo  p-2">
             <div className="w-3 h-0.5 bg-stone"></div>
             <div className="w-6 h-0.5 bg-stone"></div>
             <div className="w-3 h-0.5 bg-stone"></div>
