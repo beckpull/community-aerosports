@@ -9,10 +9,10 @@ import Banner from '../assets/images/banner2.jpg';
 import CountUpComponent from "@/components/countUp/countUp.jsx";
 // import TeamCard from "@/components/teamCard/teamCard.jsx";
 import CarrouselTestimonials from "@/components/testimonials/carrouselTestimonials.jsx";
-import LocationMap from "@/components/mapHomePage/map.jsx";
+import LocationMap from "@/components/homepage/map.jsx";
 import FMN1 from '@/assets/images/faafmn.png';
 import FMN2 from '@/assets/images/runwayfmn.png';
-import HoverCard from '@/components/mapHomePage/FMNHoverCard';
+import HoverCard from '@/components/homepage/FMNHoverCard';
 
 
 function Home() {
@@ -29,18 +29,21 @@ function Home() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [hoverCard, setHoverCard] = useState(null);
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
+  const handleHoverCardClick = () => {
+    setHoverCard(true);
   };
 
   const handleCloseHoverCard = () => {
-    setSelectedImage(null);
+    setHoverCard(false);
   };
 
   return (
     <>
+      {hoverCard === true && (
+        <HoverCard onClose={handleCloseHoverCard} />
+      )}
       <div style={{
         position: 'relative',
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url(${Banner})`,
@@ -63,7 +66,7 @@ function Home() {
               <i className="fas fa-clock mr-2 text-white"></i>
               <strong>
                 <a href="https://www.google.com/maps/search/?api=1&query=Four+Corners+Regional+Airport+KFMN+1300+W+Navajo+St+Farmington+NM+87401" target="_blank" rel="noopener noreferrer">
-                  M - F 9:00 AM - 5:00 PM
+                  M-F 0900 - 1700
                 </a>
               </strong>
             </span>
@@ -94,9 +97,10 @@ function Home() {
           <h1 style={{ lineHeight: '1.5' }}  className="text-left lg:text-2xl md:text-xl sm:text-lg font-bold mt-5 ml-3  mr-2">
             Ready to Take to the Skies? Discover the Thrill of Flying with Community Aerosports!
           </h1>
-          <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-3 mr-2 mb-4 md:ml-4">
-            Welcome to Community Aerosports, where your dreams of flight become reality. Whether you’ve always
-            wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is
+
+          <p style={{ lineHeight: '1.5' }} className=" text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-2 mr-2 mb-4 md:ml-4">
+            Welcome to Community Aerosports where your dreams of flight become reality. Whether you’ve always 
+            wanted to pilot an aircraft or are looking to refine your aviation skills, our experienced team is 
             here to guide you every step of the way.
           </p>
           <p style={{ lineHeight: '1.5' }} className="text-left lg:text-xl md:text-lg sm:text-base mt-4 ml-3 mr-2 mb-4 md:ml-4">
@@ -111,17 +115,11 @@ function Home() {
             With our expert instruction and comprehensive training programs, you’ll gain the confidence and
             competence to soar high and explore new horizons.
           </p>
-
-
-
-
           <CountUpComponent />
-          <LocationMap style={{ zIndex: 0 }} className="w-full h-full" />
-          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN1)}>KFMN Airport Information</p>
-          <p className='cursor-pointer text-gray-700 text-base' onClick={() => handleImageClick(FMN2)}>KFMN Runway Information</p>
-          {selectedImage && (
-            <HoverCard image={selectedImage} onClose={handleCloseHoverCard} />
-          )}
+
+          <LocationMap style={{zIndex: 0}} className="w-full h-full" />
+          <button className=' mt-6 cursor-pointer border-2 border-blue-400 p-1 lg:p-2 rounded hover:border-gray-100 hover:bg-blue-400 hover:text-gray-100 text-blue-500 hover:underline lg:text-lg md:text-base text-sm' onClick={handleHoverCardClick}>Offical FAA Information on KFMN</button>
+
           <CarrouselTestimonials />
         </div>
       </div>

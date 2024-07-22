@@ -28,7 +28,7 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-5 lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "Russell is a great instructor. I have been taking lessons from him since I started in 2015 and he has been extremely helpful and supportive in my journey into aviation."
+                "Russell is a great instructor. I have been taking lessons from him since I started and he has been extremely helpful and supportive in my journey into aviation."
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
@@ -54,7 +54,7 @@ export default function CarouselDefault() {
                 color="white"
                 className="mb-5lg:text-xl md:text-lg sm:text-base text-base opacity-80"
               >
-                "In my years of knowing Russell I have always found him to be knowledgeable, respectful and absolutely thorough. I appreciate his person and his instruction style and he has absolutely become a friend. I will always recommend him and am so excited about Emily's future in aviation!"
+                "In my years of knowing Russell, I have always found him to be knowledgeable, respectful and absolutely thorough. I appreciate his person and his instruction style and he has become a friend. I will always recommend him and am so excited about Emily's future in aviation!"
               </Typography>
               <Rating className="mb-10" value={5} readonly />
             </div>
